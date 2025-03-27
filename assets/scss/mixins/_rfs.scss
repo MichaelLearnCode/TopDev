@@ -1,0 +1,12 @@
+@mixin make-display($name, $properties) {
+    .#{$name} {
+        @each $property in $properties {
+            @each $key, $value in $property {
+                #{$key}: #{$value}; // Tạo thuộc tính CSS
+            }
+        }
+    }
+}
+
+
+@include make-display('test', (('justify-content': 'center'), ('align-items': 'center')));

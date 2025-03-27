@@ -1,0 +1,20 @@
+/* Error: $string: ("line-height" "letter-spacing" "font-weight" "font-size") is not a string.
+ *     ,
+ * 212 | $display-config-list: string.split($display-config, " ");
+ *     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   assets\scss\abstracts\_variables.scss 212:23  @use
+ *   assets\scss\layouts\_containers.scss 1:1      @forward
+ *   assets\scss\layouts\_index.scss 1:1           @use
+ *   assets\scss\main.scss 2:1                     root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: $string: ("line-height" "letter-spacing" "font-weight" "font-size") is not a string.\a     \2577 \a 212 \2502  $display-config-list: string.split($display-config, " ");\d\a     \2502                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   assets\\scss\\abstracts\\_variables.scss 212:23  @use\a   assets\\scss\\layouts\\_containers.scss 1:1      @forward\a   assets\\scss\\layouts\\_index.scss 1:1           @use\a   assets\\scss\\main.scss 2:1                     root stylesheet';
+}
