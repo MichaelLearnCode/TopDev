@@ -1,31 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../mixins/rfs" as *;
-@use "../mixins/breakpoints" as *;
 // Responsive containers that are 100% wide until a breakpoint
-@each $breakpoint, $values in var.$container-max-widths {
-  .container-#{$breakpoint} {
-    @extend .container-fluid;
-  }
 
-  @include media-breakpoint-up($breakpoint, var.$grid-breakpoints) {
-    %responsive-container-#{$breakpoint} {
-      max-width: $container-max-width;
-    }
-
-    // Extend each breakpoint which is smaller or equal to the current breakpoint
-    $extend-breakpoint: true;
-
-    @each $name, $width in var.$grid-breakpoints {
-      @if ($extend-breakpoint) {
-        .container#{breakpoint-infix($name, var.$grid-breakpoints)} {
-          @extend %responsive-container-#{$breakpoint};
-        }
-
-        // Once the current breakpoint is reached, stop extending
-        @if ($breakpoint == $name) {
-          $extend-breakpoint: false;
-        }
-      }
-    }
-  }
+@each $font in $fonts{
+    @include render-display($font, $display-config, $display-breakpoints);
 }

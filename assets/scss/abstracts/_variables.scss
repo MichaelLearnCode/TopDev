@@ -186,7 +186,11 @@ $display-breakpoints: (
     md: 768px
 );
 
-$display-config: "line-height" "letter-spacing" "font-weight" "font-size";
+$display-config: (
+    name: "name",
+    value: "values",
+    properties: "line-height" "letter-spacing" "font-weight" "font-size"
+);
 
 
 $display-1: (
@@ -195,8 +199,8 @@ $display-1: (
 );
 
 $display-2: (
-    xs: 110% 1px $font-weight-medium 16px,
-    md: 135% 0.5px $font-weight-medium 12px
+    xs: 135% 0.5px $font-weight-medium 12px,
+    md: 135% 0.5px $font-weight-medium 16px
 );
 
 $displays:(
@@ -206,19 +210,93 @@ $displays:(
         2: $display-2
     )
 );
+
+$big-title-1: (
+    xs: 130% 1px $font-weight-semibold 32px,
+    md: 130% 1px $font-weight-semibold 40px
+);
+
+$big-title-2: (
+    xs: 125% 1px $font-weight-bold 24px,
+    md: 125% 1px $font-weight-semibold 32px
+);
+
+$big-titles:(
+    name: 'big-title',
+    values: (
+        1: $big-title-1,
+        2: $big-title-2
+    )
+);
+
+$heading-1: (
+    xs: 135% 0.5px $font-weight-semibold 18px,
+    md: 134% 1px $font-weight-semibold 24px
+);
+
+$heading-2: (
+    xs: 135% 0.5px $font-weight-semibold 16px,
+    md: 130% 0 $font-weight-semibold 20px
+);
+
+$headings:(
+    name: 'heading',
+    values: (
+        1: $heading-1,
+        2: $heading-2
+    )
+);
+
+
+
+$description:(
+    name: 'description',
+    values: 142% 0.5px $font-weight-normal 18px,
+);
+
+$button-label:(
+    name: 'button-label',
+    values: 140% 0 $font-weight-bold 16px,
+);
+
+$body-1:(
+    name: 'body-1',
+    values: 140% 0 $font-weight-normal 16px,
+);
+
+$body-2:(
+    name: 'body-2',
+    values: 130% 0 $font-weight-normal 14px,
+);
+
+$sub-heading:(
+    name: 'sub-heading',
+    values: 130% 0 $font-weight-bold 14px,
+);
+
+$small-caption:(
+    name: 'small-caption',
+    values: 135% 0 $font-weight-normal 12px,
+);
+
+$extrag-small:(
+    name: 'extrag-small',
+    values: 150% 0 $font-weight-normal 10px,
+);
+
+$small-headline:(
+    name: 'small-headline',
+    values: 135% 1px $font-weight-semibold 12px,
+);
+
+$extra-small:(
+    name: 'extra-small',
+    values: 135% 0 $font-weight-normal 10px,
+);
+
+$fonts: ($displays $big-titles $headings 
+$description $button-label $body-1 $body-2 
+$sub-heading $small-caption $extrag-small 
+$small-headline $extra-small);
 // end display
-// Lấy danh sách các key từ $display-config
-@use 'sass:string';
-$display-config-list: string.split($display-config, " ");
-@debug $display-config-list;
 
-// Lấy giá trị của xs từ $display-1
-$display-1-xs: map-get($display-1, xs);
-
-// Tạo map mới
-$display-1-map: ();
-@for $i from 1 through length($display-config-list) {
-    $key: nth($display-config-list, $i); // Lấy key từ $display-config
-    $value: nth($display-1-xs, $i);     // Lấy value tương ứng từ $display-1-xs
-    $display-1-map: map-merge($display-1-map, ($key: $value)); // Thêm vào map
-}
