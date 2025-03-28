@@ -33,7 +33,7 @@
                 @include media-breakpoint-up($breakpoint, $display-breakpoints){
                     // @debug #{'map get la ' +map.get($display, $infix)};
                     $display-values: if($infix == "", map.get($display, "xs"), map.get($display, $infix));
-                    @include make-display(#{$name + if($infix!="", '-'+$infix,"") + "-" + if($modifier != null, $modifier, "")}, get-display-properties($display-values: $display-values));
+                    @include make-display(#{$name + "-" + if($modifier != null, $modifier, "")}, get-display-properties($display-values: $display-values));
                 }
             }
         }

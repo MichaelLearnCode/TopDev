@@ -1,3 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --error-1: #D70801;
+  --error-2: #FE564B;
+  --error-3: #FFEEEA;
+  --infor-1: #3366FF;
+  --infor-2: #2E9DFF;
+  --infor-3: #E9F6FE;
+  --success-1: #209B25;
+  --success-2: #95E999;
+  --success-3: #EAFBEB;
+  --neutral-gray-1: #F0F0F0;
+  --neutral-gray-2: #E0E0E0;
+  --neutral-gray-3: #C2C2C2;
+  --neutral-gray-4: #A3A3A3;
+  --neutral-gray-5: #858585;
+  --neutral-gray-6: #666666;
+  --neutral-gray-7: #383E46;
+  --neutral-gray-8: #212832;
+  --primary: #E24C32;
+  --primary-DC1: #47130A;
+  --primary-DC2: #9C2A16;
+  --primary-LC1: #E66751;
+  --primary-LC2: #EB8370;
+  --primary-LC3: #EF9E8F;
+  --primary-LC4: #F8D4CE;
+  --primary-LC5: #FCEFED;
+  --white: #fff;
+  --black: #222631;
+  --box-shadow: 0 0.5rem 1rem rgba(34, 38, 49, 0.15);
+  --box-shadow-sm: 0 0.125rem 0.25rem rgba(34, 38, 49, 0.075);
+  --box-shadow-lg: 0 1rem 3rem rgba(34, 38, 49, 0.175);
+  --border-radius: 0.375rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 1rem;
+  --border-radius-xxl: 2rem;
+  --border-radius-pill: 50rem;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  color: #222831;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+h1 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 25.92px;
+  color: #222831;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 21.6px;
+  color: #222831;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  color: #222831;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -1411,30 +1501,30 @@
 .display-1 {
   line-height: 110%;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
 }
 
 .display-2 {
   line-height: 135%;
   letter-spacing: 0.5px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 12px;
 }
 
 @media (min-width: 768px) {
-  .display-md-1 {
+  .display-1 {
     line-height: 110%;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
   }
 }
 @media (min-width: 768px) {
-  .display-md-2 {
+  .display-2 {
     line-height: 135%;
     letter-spacing: 0.5px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
   }
 }
@@ -1453,7 +1543,7 @@
 }
 
 @media (min-width: 768px) {
-  .big-title-md-1 {
+  .big-title-1 {
     line-height: 130%;
     letter-spacing: 1px;
     font-weight: 600;
@@ -1461,7 +1551,7 @@
   }
 }
 @media (min-width: 768px) {
-  .big-title-md-2 {
+  .big-title-2 {
     line-height: 125%;
     letter-spacing: 1px;
     font-weight: 600;
@@ -1483,7 +1573,7 @@
 }
 
 @media (min-width: 768px) {
-  .heading-md-1 {
+  .heading-1 {
     line-height: 134%;
     letter-spacing: 1px;
     font-weight: 600;
@@ -1491,7 +1581,7 @@
   }
 }
 @media (min-width: 768px) {
-  .heading-md-2 {
+  .heading-2 {
     line-height: 130%;
     letter-spacing: 0;
     font-weight: 600;
@@ -1503,6 +1593,13 @@
   letter-spacing: 0.5px;
   font-weight: 400;
   font-size: 18px;
+}
+
+.description-small {
+  line-height: 135%;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 10px;
 }
 
 .button-label {
@@ -1529,35 +1626,35 @@
 .sub-heading {
   line-height: 130%;
   letter-spacing: 0;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
 }
 
 .small-caption {
   line-height: 135%;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 12px;
 }
 
 .extrag-small {
   line-height: 150%;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 10px;
 }
 
 .small-headline {
   line-height: 135%;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 12px;
 }
 
 .extra-small {
   line-height: 135%;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 10px;
 }
 
@@ -1857,6 +1954,11 @@
   flex: 1 1 auto;
 }
 
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1879,6 +1981,22 @@
 
 .flex-grow-1 {
   flex-grow: 1;
+}
+
+.shadow {
+  box-shadow: var(--box-shadow);
+}
+
+.shadow-sm {
+  box-shadow: var(--box-shadow-sm);
+}
+
+.shadow-lg {
+  box-shadow: var(--box-shadow-lg);
+}
+
+.shadow-none {
+  box-shadow: none;
 }
 
 .flex-shrink-0 {
@@ -8710,6 +8828,36 @@
   .text-xxl-center {
     text-align: center;
   }
+}
+.card {
+  width: 315px;
+  height: 170px;
+}
+.card .card-header {
+  border-width: 0 0 1px 0;
+  border-color: transparent transparent var(--neutral-gray-5) transparent;
+  border-style: dashed;
+}
+.card .card-img {
+  width: 48px;
+  height: 48px;
+}
+.card .card-img img {
+  width: 32px;
+  height: 32px;
+}
+.card .card-save-icon {
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+}
+.card .status-icon {
+  width: 15px;
+  height: 15px;
+}
+.card .status-icon img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

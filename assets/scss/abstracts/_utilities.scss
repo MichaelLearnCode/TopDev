@@ -176,6 +176,11 @@ $utilities: map.merge(
       property: flex,
       values: (fill: 1 1 auto)
     ),
+    "flex-center": (
+      class: 'flex',
+      property: align-items justify-content,
+      values: center
+    ),
     "flex-direction": (
       responsive: true,
       property: flex-direction,
@@ -189,6 +194,16 @@ $utilities: map.merge(
       values: (
         grow-0: 0,
         grow-1: 1,
+      )
+    ),
+    "shadow": (
+      property: box-shadow,
+      class: shadow,
+      values: (
+        null: var(--box-shadow),
+        sm: var(--box-shadow-sm),
+        lg: var(--box-shadow-lg),
+        none: none,
       )
     ),
     "flex-shrink": (

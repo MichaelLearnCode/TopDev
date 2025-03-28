@@ -1,9 +1,12 @@
+*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 body {
     margin: 0; // 1
-    font-family: var(--body-font-family);
-    
-  }
+}
+
+ul {
+  list-style: none;
+}

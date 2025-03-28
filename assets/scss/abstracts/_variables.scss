@@ -66,6 +66,14 @@ $errors: (
     3: $error-3
 );
 
+$color-themes: (
+    'error': $errors,
+    'infor': $infors,
+    'success': $successes,
+    'neutral-gray': $neutral-grays,
+    'primary': $primary
+);
+
 $bg-primary: #D34127;
 $bg-dark: #222831;
 $bg-medium: #393E46;
@@ -194,22 +202,15 @@ $display-config: (
 
 
 $display-1: (
-    xs: 110% 1px $font-weight-medium 16px,
-    md: 110% 1px $font-weight-medium 20px
+    xs: 110% 1px $font-weight-semibold 16px,
+    md: 110% 1px $font-weight-semibold 20px
 );
 
 $display-2: (
-    xs: 135% 0.5px $font-weight-medium 12px,
-    md: 135% 0.5px $font-weight-medium 16px
+    xs: 135% 0.5px $font-weight-semibold 12px,
+    md: 135% 0.5px $font-weight-semibold 16px
 );
 
-$displays:(
-    name: 'display',
-    values: (
-        1: $display-1,
-        2: $display-2
-    )
-);
 
 $big-title-1: (
     xs: 130% 1px $font-weight-semibold 32px,
@@ -219,14 +220,6 @@ $big-title-1: (
 $big-title-2: (
     xs: 125% 1px $font-weight-bold 24px,
     md: 125% 1px $font-weight-semibold 32px
-);
-
-$big-titles:(
-    name: 'big-title',
-    values: (
-        1: $big-title-1,
-        2: $big-title-2
-    )
 );
 
 $heading-1: (
@@ -239,64 +232,77 @@ $heading-2: (
     md: 130% 0 $font-weight-semibold 20px
 );
 
-$headings:(
-    name: 'heading',
-    values: (
-        1: $heading-1,
-        2: $heading-2
+$fonts:(
+    (
+        name: 'display',
+        values: (
+            1: $display-1,
+            2: $display-2
+        )
+    ),
+    (
+        name: 'big-title',
+        values: (
+            1: $big-title-1,
+            2: $big-title-2
+        )
+    ),
+    (
+        name: 'heading',
+        values: (
+            1: $heading-1,
+            2: $heading-2
+        )
+    ),
+    (
+        name: 'description',
+        values: 142% 0.5px $font-weight-normal 18px,
+    ),
+    (
+        name: 'description-small',
+        values: 135% 0 $font-weight-normal 10px,
+    ),
+    (
+        name: 'button-label',
+        values: 140% 0 $font-weight-bold 16px,
+    ),
+    (
+        name: 'body-1',
+        values: 140% 0 $font-weight-normal 16px,
+    ),
+    (
+        name: 'body-2',
+        values: 130% 0 $font-weight-normal 14px,
+    ),
+    (
+        name: 'sub-heading',
+        values: 130% 0 $font-weight-semibold 14px,
+    ),
+    (
+        name: 'small-caption',
+        values: 135% 0 $font-weight-medium 12px,
+    ),
+    (
+        name: 'extrag-small',
+        values: 150% 0 $font-weight-semibold 10px,
+    ),
+    (
+        name: 'small-headline',
+        values: 135% 1px $font-weight-medium 12px,
+    ),
+    (
+        name: 'extra-small',
+        values: 135% 0 $font-weight-semibold 10px,
     )
 );
 
-
-
-$description:(
-    name: 'description',
-    values: 142% 0.5px $font-weight-normal 18px,
-);
-
-$button-label:(
-    name: 'button-label',
-    values: 140% 0 $font-weight-bold 16px,
-);
-
-$body-1:(
-    name: 'body-1',
-    values: 140% 0 $font-weight-normal 16px,
-);
-
-$body-2:(
-    name: 'body-2',
-    values: 130% 0 $font-weight-normal 14px,
-);
-
-$sub-heading:(
-    name: 'sub-heading',
-    values: 130% 0 $font-weight-bold 14px,
-);
-
-$small-caption:(
-    name: 'small-caption',
-    values: 135% 0 $font-weight-normal 12px,
-);
-
-$extrag-small:(
-    name: 'extrag-small',
-    values: 150% 0 $font-weight-normal 10px,
-);
-
-$small-headline:(
-    name: 'small-headline',
-    values: 135% 1px $font-weight-semibold 12px,
-);
-
-$extra-small:(
-    name: 'extra-small',
-    values: 135% 0 $font-weight-normal 10px,
-);
-
-$fonts: ($displays $big-titles $headings 
-$description $button-label $body-1 $body-2 
-$sub-heading $small-caption $extrag-small 
-$small-headline $extra-small);
+// $fonts: ($displays $big-titles $headings 
+// $description $button-label $body-1 $body-2 
+// $sub-heading $small-caption $extrag-small 
+// $small-headline $extra-small);
 // end display
-
+// start shadow
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+// end shadow

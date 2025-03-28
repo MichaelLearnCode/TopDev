@@ -1,5 +1,45 @@
 @use '../abstracts/variables' as *;
 @use 'sass:meta';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
- 
+    @each $name, $colors in $color-themes {
+        @each $key, $color in $colors{
+            --#{$name + if($key == null, "", '-' + $key)}: #{$color};
+        } 
+    }
+    --white: #{$white};
+    --black: #{$black};
+    --box-shadow: #{$box-shadow};
+    --box-shadow-sm: #{$box-shadow-sm};
+    --box-shadow-lg: #{$box-shadow-lg};
+    --border-radius: #{$border-radius};
+    --border-radius-sm: #{$border-radius-sm};
+    --border-radius-lg: #{$border-radius-lg};
+    --border-radius-xl: #{$border-radius-xl};
+    --border-radius-xxl: #{$border-radius-xxl};
+    --border-radius-pill: #{$border-radius-pill};
+}
+@mixin default-typography($ff: "Roboto",$fw: 400, $fz, $fc: #222831, $ls: 0, $lh: 1.45){
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    color: $fc;
+    letter-spacing: $ls;
+    line-height: $lh;
+}
+body{
+    @include default-typography($fz: 15px)
+}
+
+h1{
+    @include default-typography($fz: 25.92px,$fw: 700);
+}
+
+h2{
+    @include default-typography($fz: 21.6px, $fw: 700);
+}
+
+h3{
+    @include default-typography($fz: 18px)
 }
