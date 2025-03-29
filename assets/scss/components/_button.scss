@@ -23,7 +23,7 @@
     border-radius: var(--btn-border-radius);
     width: var(--btn-width);
     height: var(--btn-height);
-    &.btn-primary{
+    &.active{
         --btn-bg: var(--primary);
         --btn-color: var(--white);
     }

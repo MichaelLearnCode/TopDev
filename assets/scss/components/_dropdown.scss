@@ -1,0 +1,100 @@
+
+
+.dropdown{
+    --dropdown-padding-x: 16px;
+    --dropdown-padding-y: 12px;
+    --dropdown-bg: transparent;
+    --dropdown-border-radius: 12px;
+    --dropdown-color: var(--neutral-gray-7);
+    --dropdown-list-bg: transparent;
+    --dropdown-list-border-radius: 3px;
+    --dropdown-item-hover-bg: var(--neutral-gray-2);
+    --dropdown-item-hover-color: rgb(56, 62, 70);
+    --dropdown-list-shadow: var(--box-shadow);
+    cursor: pointer;
+    padding: var(--dropdown-padding-y) var(--dropdown-padding-x);
+    background-color: var(--dropdown-bg);
+    border-radius: var(--dropdown-border-radius);
+    color: var(--dropdown-color);
+    position: relative;
+    .dropdown-right-icon{
+        width: 12px;
+        svg{
+            width: 100%;
+        }
+    }
+    .dropdown-list{
+        display: none;
+        overflow: hidden;
+        margin: 0;
+        box-shadow: var(--dropdown-list-shadow);
+        position: absolute;
+        width: 100%;
+        top:100%;
+        left: 0;
+        padding-left: 0;
+        background-color: var(--dropdown-list-bg);
+        border-radius: var(--dropdown-list-border-radius);
+        &.active{
+            display: block;
+        }
+    }
+    .dropdown-item{
+        &:hover{
+            background-color: var(--dropdown-item-hover-bg);
+            color: var(--dropdown-item-hover-color);
+            cursor: pointer;
+        }
+    }
+    &.dropdown-with-icon{
+        --dropdown-bg: var(--neutral-gray-1);
+        padding-left: 32px;
+        padding-right: 16px;
+        .dropdown-left-icon{
+            width: 24px;
+            height: 24px;
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .dropdown-list{
+            --dropdown-list-bg: var(--white);
+        }
+        .dropdown-item{
+            padding-left: 32px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+    &.dropdown-profile{
+        --dropdown-padding-x: 18px;
+        --dropdown-bg: #1B2537;
+        --dropdown-item-hover-bg: #4b5569;
+        .dropdown-avatar{
+            width: 40px;
+            height: 40px;
+            img{
+                width: 100%;
+            }
+        }
+        .dropdown-name{
+            line-height: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--neutral-gray-3);
+        }
+        .dropdown-role{
+            color: #fff;
+        }
+        .dropdown-list{
+            --dropdown-list-bg: #1B2537;
+        }
+        .dropdown-item{
+            padding-left: 18px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: #fff;
+        }
+    }
+}

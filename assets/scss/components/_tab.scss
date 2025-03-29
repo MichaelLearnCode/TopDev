@@ -1,0 +1,8 @@
+.tab{
+    .tab-content{
+        display: none;
+        &.active{
+            display: flex;
+        }
+    }
+}

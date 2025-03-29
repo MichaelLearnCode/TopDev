@@ -92,6 +92,7 @@ h3 {
 .job-card {
   width: 315px;
   height: 170px;
+  box-shadow: 0px 12px 60px 0px rgba(156, 161, 186, 0.16);
 }
 .job-card .card-header {
   border-width: 0 0 1px 0;
@@ -145,7 +146,7 @@ h3 {
   width: var(--btn-width);
   height: var(--btn-height);
 }
-.btn.btn-primary {
+.btn.active {
   --btn-bg: var(--primary);
   --btn-color: var(--white);
 }
@@ -169,6 +170,110 @@ h3 {
   --btn-bg: #1B2537;
   --btn-color: var(--white);
   --btn-border-radius: 12px;
+}
+
+.tab .tab-content {
+  display: none;
+}
+.tab .tab-content.active {
+  display: flex;
+}
+
+.dropdown {
+  --dropdown-padding-x: 16px;
+  --dropdown-padding-y: 12px;
+  --dropdown-bg: transparent;
+  --dropdown-border-radius: 12px;
+  --dropdown-color: var(--neutral-gray-7);
+  --dropdown-list-bg: transparent;
+  --dropdown-list-border-radius: 3px;
+  --dropdown-item-hover-bg: var(--neutral-gray-2);
+  --dropdown-item-hover-color: rgb(56, 62, 70);
+  --dropdown-list-shadow: var(--box-shadow);
+  cursor: pointer;
+  padding: var(--dropdown-padding-y) var(--dropdown-padding-x);
+  background-color: var(--dropdown-bg);
+  border-radius: var(--dropdown-border-radius);
+  color: var(--dropdown-color);
+  position: relative;
+}
+.dropdown .dropdown-right-icon {
+  width: 12px;
+}
+.dropdown .dropdown-right-icon svg {
+  width: 100%;
+}
+.dropdown .dropdown-list {
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: var(--dropdown-list-shadow);
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding-left: 0;
+  background-color: var(--dropdown-list-bg);
+  border-radius: var(--dropdown-list-border-radius);
+}
+.dropdown .dropdown-list.active {
+  display: block;
+}
+.dropdown .dropdown-item:hover {
+  background-color: var(--dropdown-item-hover-bg);
+  color: var(--dropdown-item-hover-color);
+  cursor: pointer;
+}
+.dropdown.dropdown-with-icon {
+  --dropdown-bg: var(--neutral-gray-1);
+  padding-left: 32px;
+  padding-right: 16px;
+}
+.dropdown.dropdown-with-icon .dropdown-left-icon {
+  width: 24px;
+  height: 24px;
+}
+.dropdown.dropdown-with-icon .dropdown-left-icon img {
+  width: 24px;
+  height: 24px;
+}
+.dropdown.dropdown-with-icon .dropdown-list {
+  --dropdown-list-bg: var(--white);
+}
+.dropdown.dropdown-with-icon .dropdown-item {
+  padding-left: 32px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.dropdown.dropdown-profile {
+  --dropdown-padding-x: 18px;
+  --dropdown-bg: #1B2537;
+  --dropdown-item-hover-bg: #4b5569;
+}
+.dropdown.dropdown-profile .dropdown-avatar {
+  width: 40px;
+  height: 40px;
+}
+.dropdown.dropdown-profile .dropdown-avatar img {
+  width: 100%;
+}
+.dropdown.dropdown-profile .dropdown-name {
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--neutral-gray-3);
+}
+.dropdown.dropdown-profile .dropdown-role {
+  color: #fff;
+}
+.dropdown.dropdown-profile .dropdown-list {
+  --dropdown-list-bg: #1B2537;
+}
+.dropdown.dropdown-profile .dropdown-item {
+  padding-left: 18px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #fff;
 }
 
 .container,
@@ -209,7 +314,7 @@ h3 {
 }
 @media (min-width: 1440px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    max-width: 1440px;
   }
 }
 .row {

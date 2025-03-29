@@ -9,7 +9,7 @@
 <body>
      <div class="container mt-10 d-flex justify-center">
         <!-- card component -->
-        <div class="job-card d-flex flex-column rounded-4 bg-white shadow p-4">
+        <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
             <div class="card-header pb-5 d-flex items-center">
                 <div class="card-img d-flex flex-center">
                     <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
@@ -52,17 +52,17 @@
         </div>
      </div>
      <div class="mt-10">
-        <div class="tab">
-            <div class="px-4 px-xxl-12">
+        <div class="tab js-tab">
+            <div class="container px-4 px-xxl-12">
                 <div class="tab-header d-flex items-center w-100 gap-2">
-                    <button class="btn btn-job button-label btn-primary">Tất cả</button>
-                    <button class="btn btn-job button-label">Quận 1</button>
-                    <button class="btn btn-job button-label">Quận 2</button>
+                    <button data-tab-target = "#all" class="btn btn-job button-label js-tab-trigger active">Tất cả</button>
+                    <button data-tab-target = "#district-1" class="btn btn-job button-label js-tab-trigger">Quận 1</button>
+                    <button data-tab-target = "#district-2" class="btn btn-job button-label js-tab-trigger">Quận 2</button>
                 </div>
                 <div class="tab-body mt-8">
-                    <div class="row justify-center justify-sm-start gy-4 gy-sm-5 gy-md-6 gy-xl-7 gy-xxl-8 gx-4">
-                        <div class="col-12 col-md-6 col-lg-4 col-xxl-3 col d-flex justify-center">
-                            <div class="job-card d-flex flex-column rounded-4 bg-white shadow p-4">
+                    <div id ="all" class="active tab-content js-tab-content row row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 justify-center justify-sm-start gy-4 gy-sm-5 gy-md-6 gy-xl-7 gy-xxl-8 gx-4">
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
                                 <div class="card-header pb-5 d-flex items-center">
                                     <div class="card-img d-flex flex-center">
                                         <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
@@ -97,8 +97,8 @@
                             </div>
                         </div>
                         <!--  -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xxl-3 col d-flex justify-center">
-                            <div class="job-card d-flex flex-column rounded-4 bg-white shadow p-4">
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
                                 <div class="card-header pb-5 d-flex items-center">
                                     <div class="card-img d-flex flex-center">
                                         <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
@@ -133,8 +133,8 @@
                             </div>
                         </div>
                         <!--  -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xxl-3 col d-flex justify-center">
-                            <div class="job-card d-flex flex-column rounded-4 bg-white shadow p-4">
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
                                 <div class="card-header pb-5 d-flex items-center">
                                     <div class="card-img d-flex flex-center">
                                         <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
@@ -169,8 +169,8 @@
                             </div>
                         </div>
                         <!--  -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xxl-3 col d-flex justify-center">
-                            <div class="job-card d-flex flex-column rounded-4 bg-white shadow p-4">
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
                                 <div class="card-header pb-5 d-flex items-center">
                                     <div class="card-img d-flex flex-center">
                                         <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
@@ -204,11 +204,353 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <!--  -->
                     </div>
+                    <!-- end tab all -->
+                     <!-- start tab district-1 -->
+                    <div id ="district-1" class="tab-content js-tab-content row row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 justify-center justify-sm-start gy-4 gy-sm-5 gy-md-6 gy-xl-7 gy-xxl-8 gx-4">
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">D1-Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <!-- end tab district-1 -->
+                      <!-- start tab district-2 -->
+                    <div id ="district-2" class="tab-content js-tab-content row row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 justify-center justify-sm-start gy-4 gy-sm-5 gy-md-6 gy-xl-7 gy-xxl-8 gx-4">
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">D2-Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="col d-flex justify-center">
+                            <div class="job-card d-flex flex-column rounded-4 bg-white  p-4">
+                                <div class="card-header pb-5 d-flex items-center">
+                                    <div class="card-img d-flex flex-center">
+                                        <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="d-flex flex-column">
+                                        <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
+                                        <span class="extra-small text-primary">Up to 5000$</span>
+                                    </div>
+                                    <span class="mx-2"></span>
+                                    <div class="card-save-icon d-flex fle-center">
+                                        <img src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-5">
+                                    <div class="card-status d-flex mb-2">
+                                        <div class="d-flex me-4">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Remot</span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="status-icon me-1 d-flex flex-center">
+                                                <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
+                                            </div>
+                                            <span class="small-headline">Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc description-small">We are looking for a dynamic Web designer who will be responsible...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <!-- end tab district-2 -->
                 </div>
             </div>
         </div>
      </div>
+     <div class="mt-10 d-flex gap-14 justify-center">
+        <div class="d-flex items-center js-dropdown gap-6 dropdown dropdown-with-icon">
+            <div class="dropdown-left-icon">
+                <img src="./assets/image/spotlight-section/icon/img_icon_location.png" alt="">
+            </div>
+            <span class="body-1">Vị trí</span>
+            <div class="dropdown-right-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1.2187L4 4.21021L7 7.20171L13 1.2187" stroke="#383E46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>            </div>
+            <ul class="dropdown-list js-dropdown-content">
+                <li class="dropdown-item">Hà Nội</li>
+                <li class="dropdown-item">TP.HCM</li>
+                <li class="dropdown-item">Quảng Ninh</li>
+                <li class="dropdown-item">Vũng Tàu</li>
+            </ul>
+        </div>
+     </div>
+     <div class="py-14"></div>
+     <div class="mt-10 d-flex gap-14 justify-center">
+        <div class="d-flex items-center gap-3 js-dropdown-2 dropdown dropdown-profile">
+            <div class="dropdown-avatar">
+                <img src="./assets/image/header/img_avatar.png" alt="avatar">
+            </div>
+            <div class="dropdown-name-wrapper d-flex flex-column">
+                <span class="dropdown-name">Nguyễn Tấn Đạt</span>
+                <span class="dropdown-role button-label">UI UX</span>
+            </div>
+            <div class="dropdown-right-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1.0085L7 6.9915L13 1.0085" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <ul class="dropdown-list js-dropdown-content">
+                <li class="dropdown-item">Thông tin</li>
+                <li class="dropdown-item">Trợ giúp</li>
+                <li class="dropdown-item">Cài đặt</li>
+                <li class="dropdown-item">Đăng xuất</li>
+            </ul>
+        </div>
+     </div>
+     <div class="py-14"></div>
+     <div class="py-14"></div>
+     <div class="py-14"></div>
+     <script type = "module" src = './assets/js/main.js'></script>
 </body>
 </html>
