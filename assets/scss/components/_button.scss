@@ -1,0 +1,53 @@
+@use '../abstracts/variables' as *;
+.btn {
+    --btn-padding-x: #{$btn-padding-x};
+    --btn-padding-y: #{$btn-padding-y};
+    --btn-font-size: #{$btn-font-size};
+    --btn-line-height: #{$btn-line-height};
+    --btn-font-weight: #{$btn-font-weight};
+    --btn-color: #{$btn-color};
+    --btn-bg: var(--neutral-gray-1);
+    --btn-border-width: #{$btn-border-width};
+    --btn-border-color: #{$btn-border-color};
+    --btn-border-radius: #{$btn-border-radius};
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: var(--btn-line-height);
+    font-weight: var(--btn-font-weight);
+    font-size: var(--btn-font-size);
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    border: var(--btn-border-width) solid var(--btn-border-color);
+    border-radius: var(--btn-border-radius);
+    width: var(--btn-width);
+    height: var(--btn-height);
+    &.btn-primary{
+        --btn-bg: var(--primary);
+        --btn-color: var(--white);
+    }
+    &.btn-job{
+        --btn-width: 94px;
+        --btn-height: 38px;
+        --btn-border-radius: 8px;
+    }
+    &.btn-suggest{
+        --btn-padding-x: 16px;
+        --btn-padding-y: 8px;
+        --btn-bg: transparent;
+        background: 
+        linear-gradient(to right, white, white), 
+        var(--gradient); 
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+    }
+    &.btn-search{
+        --btn-padding-y: 12px;
+        --btn-width: 100%;
+        max-width: 190px;
+        --btn-bg: #1B2537;
+        --btn-color: var(--white);
+        --btn-border-radius: 12px;
+    }
+}
