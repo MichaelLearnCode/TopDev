@@ -12,12 +12,11 @@ const Tab = function({
     targetAttribute = TARGETATTRIBUTE
 }){
     const tab = document.querySelector(`.${tabClass}`);
-    console.log(tabClass);
-    console.log(tab);
-    if (!tab) return;
+    if (!tab) return console.log('tab not found');
     const tabBtns = tab.querySelectorAll(`.${tabBtnClass}`);
     const tabContents = tab.querySelectorAll(`.${tabContentClass}`);
-    if (!tabContents.length || !tabBtns.length)return;
+    if (!tabContents.length || !tabBtns.length)return console.log('content or btn not found');
+    
     function init(){
         defaultActive();
         tabBtns.forEach(tabBtn=>tabBtn.onclick = handleClick);
@@ -26,7 +25,7 @@ const Tab = function({
     function handleClick(e){
         const clickedBtn = this;
         const contentId = clickedBtn.getAttribute(targetAttribute);
-        if (!contentId)return;
+        if (!contentId)return console.log('content not found');
         removeAllActive();
         addActive(clickedBtn, contentId);
     }
@@ -40,7 +39,7 @@ const Tab = function({
     function addActive(activeBtn, contentId){
         activeBtn.classList.add(activeClass);
         const tabContent = tab.querySelector(contentId);
-        if (!tabContent)return;
+        if (!tabContent)return console.log('content not found');
         tabContent.classList.add(activeClass)
     }
     function removeAllActive(){

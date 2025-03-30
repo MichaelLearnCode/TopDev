@@ -1,3 +1,5 @@
+$enable-important-utilities: true;
+
 // colors
 $black: #222631;
 $white: #fff;
@@ -72,7 +74,7 @@ $color-themes: (
     'infor': $infors,
     'success': $successes,
     'neutral-gray': $neutral-grays,
-    'primary': $primary
+    'primary': $primary,
 );
 
 $bg-primary: #D34127;
@@ -87,24 +89,11 @@ $bg: (
     "medium": $bg-medium,
     "bright": $bg-bright,
     "light": $bg-light,
-    "white": $bg-white
+    "white": $bg-white,
 );
 
-$text-white: #fff;
-$text-light: #efefef;
-$text-bright: #d2d2d2;
-$text-medium: #393E46;
-$text-dark: #222831;
-$text-primary: #d34127;
-$text: (
-    "primary": $text-primary,
-    "dark": $text-dark,
-    "medium": $text-medium,
-    "bright": $text-bright,
-    "light": $text-light,
-    "white": $text-white,
-    "black": $black
-);
+
+$text: $bg;
 // start spacers
 $spacer: 4px !default;
 $spacers: (
@@ -163,6 +152,7 @@ $border-widths: (
 ) !default;
 $border-style:                solid !default;
 $border-color:                #dee2e6 !default;
+$border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-start border-radius-variables
 $border-radius:               .375rem !default;
 $border-radius-sm:            .25rem !default;
@@ -315,8 +305,24 @@ $btn-font-size: 16px;
 $btn-line-height: 140%;
 $btn-font-weight: $font-weight-bold;
 $btn-color: $black;
-$btn-bg: transparent;
+$btn-bg: $neutral-gray-1;
 $btn-border-width: 1px;
 $btn-border-color: transparent;
 $btn-border-radius: $border-radius;
 // end button
+//start card
+$card-spacer-y:                     $spacer !default;
+$card-spacer-x:                     $spacer !default;
+$card-title-spacer-y:               $spacer * .5 !default;
+$card-title-color:                  null !default;
+$card-subtitle-color:               null !default;
+$card-border-width:                 var(--border-width) !default;
+$card-border-color:                 var(--border-color-translucent) !default;
+$card-border-radius:                var(--border-radius) !default;
+$card-box-shadow:                   $box-shadow !default;
+$card-img-overlay-padding:          $spacer !default;
+$card-cap-padding-y:                $card-spacer-y * .5 !default;
+$card-cap-padding-x:                $card-spacer-x !default;
+$card-cap-color:                    null !default;
+$card-cap-bg:                       null !default;
+// end card

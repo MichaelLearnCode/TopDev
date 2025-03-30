@@ -1,6 +1,7 @@
 import Tab from './components/Tab.js';
 import Dropdown from './components/Dropdown.js';
 
-Tab({}).init().defaultActive(1);
+Tab({}).init();
+Tab({tabClass: "js-tab-base"}).init();
 Dropdown({}).init();
 Dropdown({dropdownClass: 'js-dropdown-2'}).init();

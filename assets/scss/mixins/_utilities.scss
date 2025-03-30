@@ -51,7 +51,7 @@
                   --#{$local-var}: #{$variable};
                 }
               }
-              #{$property}: $value;
+              #{$property}: $value if($enable-important-utilities, !important, null);
             }
           }
         }
