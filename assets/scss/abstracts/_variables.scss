@@ -94,6 +94,14 @@ $bg: (
 
 
 $text: $bg;
+// body
+$body-color:                #383E46 !default;
+$body-bg:                   $white !default;
+$body-tertiary-color:       rgba($body-color, .5) !default;
+$body-tertiary-bg:          #A3A3A3 !default;
+
+$body-emphasis-color:       $black !default;
+
 // start spacers
 $spacer: 4px !default;
 $spacers: (
@@ -180,6 +188,7 @@ $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 // end font-weight
 // start display
+$font-size-base: 14px;
 $line-height-base: 1.45;
 $display-breakpoints: (
     xs: 0,
@@ -326,3 +335,39 @@ $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-color:                    null !default;
 $card-cap-bg:                       null !default;
 // end card
+// start zindex config
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-offcanvas-backdrop:         1040 !default;
+$zindex-offcanvas:                  1045 !default;
+$zindex-modal-backdrop:             1050 !default;
+$zindex-modal:                      1055 !default;
+$zindex-popover:                    1070 !default;
+$zindex-tooltip:                    1080 !default;
+$zindex-toast:                      1090 !default;
+// end zindex config
+// start dropdown
+$dropdown-min-width:                10rem !default;
+$dropdown-padding-x:                0 !default;
+$dropdown-padding-y:                0rem !default;
+$dropdown-spacer:                   .125rem !default;
+$dropdown-font-size:                $font-size-base !default;
+$dropdown-color:                    var(--body-color) !default;
+$dropdown-bg:                       var(--body-bg) !default;
+$dropdown-border-color:             var(--border-color-translucent) !default;
+$dropdown-border-radius:            var(--border-radius) !default;
+$dropdown-border-width:             var(--border-width) !default;
+$dropdown-divider-bg:               $dropdown-border-color !default;
+$dropdown-divider-margin-y:         $spacer * .5 !default;
+$dropdown-box-shadow:               var(--box-shadow) !default;
+
+$dropdown-link-color:               var(--body-color) !default;
+$dropdown-link-hover-color:         $dropdown-link-color !default;
+$dropdown-link-hover-bg:            var(--tertiary-bg) !default;
+
+$dropdown-link-disabled-color:      var(--tertiary-color) !default;
+
+$dropdown-item-padding-y:           $spacer !default;
+$dropdown-item-padding-x:           $spacer * 4 !default;
+// end dropdown

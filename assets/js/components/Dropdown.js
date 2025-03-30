@@ -1,6 +1,6 @@
 const DROPDOWNCLASS = 'js-dropdown';
 const DROPDOWNCONTENTCLASS = 'js-dropdown-content';
-const ACTIVECLASS = 'active';
+const ACTIVECLASS = 'show';
 
 const Dropdown = function({
     dropdownClass = DROPDOWNCLASS,
@@ -9,6 +9,7 @@ const Dropdown = function({
 }){
     const dropdown = document.querySelector(`.${dropdownClass}`);
     if (!dropdown)return;
+    console.log(dropdown);
     const dropdownContent = dropdown.querySelector(`.${dropdownContentClass}`)
     if (!dropdownContent)return;
     function init(){
