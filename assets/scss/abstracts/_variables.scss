@@ -371,3 +371,20 @@ $dropdown-link-disabled-color:      var(--tertiary-color) !default;
 $dropdown-item-padding-y:           $spacer !default;
 $dropdown-item-padding-x:           $spacer * 4 !default;
 // end dropdown
+// start navbar
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                1rem !default;
+$navbar-padding-y:                  $spacer * .5 !default;
+$navbar-padding-x:                  null !default;
+$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-brand-padding-y:            1rem !default;
+$navbar-brand-margin-end:           1rem !default;
+// end navbar
+// start badge
+$badge-font-size:                   .75em !default;
+$badge-font-weight:                 $font-weight-bold !default;
+$badge-color:                       $white !default;
+$badge-padding-y:                   .35em !default;
+$badge-padding-x:                   .65em !default;
+$badge-border-radius:               var(--border-radius) !default;
+// end badge

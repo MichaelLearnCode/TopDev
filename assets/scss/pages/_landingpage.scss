@@ -1,0 +1,89 @@
+
+.navbar{
+    .nav-bell{
+        background-color: transparent;
+        border: none;
+        position: relative;
+        .badge{
+            border-radius: 100px;
+            background-color: #FF1D1D;
+            position: absolute;
+            top: -5px;
+            right: 0;
+            padding: 2px 4px;
+        }
+    }
+    .dropdown-profile{
+        .dropdown-toggle{
+            border-radius: 16px;
+        }
+    }
+}
+
+.hero-section{
+    .banner{
+        width: 100%;
+    }
+    .search-input{
+        position: relative;
+        input{
+            padding: 12px 0 12px 79px;
+            border-radius: 12px;
+            border: none;
+            background-color: var(--neutral-gray-1);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.4;
+            max-width: 604px;
+        }
+        .search-icon{
+            position: absolute;
+            left: 39px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .location-btn, .search-btn{
+        border-radius: 12px;
+    }
+    
+}
+
+.category-section{
+    .category-logo{
+        border: 1px solid #ccc;
+        height: 68px;
+        position: relative;
+
+        border-radius: 10px;
+        img{
+            height: 70%;
+        }
+    }
+    .category-propose-carousel{
+        .owl-dots{
+            margin-top: 10px;
+        }
+    }
+}
+
+.advertise-section{
+    .advertise-logo{
+        height: 68px;
+        position: relative;
+
+        img{
+            height: 70%;
+        }
+    }
+}
+
+.today-section{
+    background-image: linear-gradient(to right, #eb2702 3%, #ff7d25 75%, #ff9d5a 100%);
+    
+}
+@media (min-width: 768px){
+    .bg-md-transparent{
+        background-color: transparent !important;
+    }
+}
