@@ -9633,6 +9633,7 @@ h1, .h3 {
   border: 1px solid #ccc;
   height: 68px;
   position: relative;
+  padding: 0 6px;
   border-radius: 10px;
 }
 .category-section .category-propose-carousel .owl-dots {
@@ -9649,6 +9650,15 @@ h1, .h3 {
 
 .today-section {
   background-image: linear-gradient(90deg, rgba(235, 39, 2, 0.1) 3.5%, rgba(255, 125, 37, 0.1) 75%, rgba(255, 157, 90, 0.1) 100%);
+}
+
+.section-divider {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
