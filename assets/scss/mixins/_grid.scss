@@ -21,6 +21,9 @@
       0
       math.percentage(
         math.div($size,$columns)
+      );
+      min-width: math.percentage(
+        math.div($size,$columns)
       ); //$size là số cột muốn chiếm. ví dụ size = 6, và đang theo columns 12, thì col này sẽ chiếm 6/12 là 50% chiều ngang
   } @else {
     flex: 1 1 0;

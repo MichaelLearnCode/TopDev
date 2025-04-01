@@ -101,6 +101,7 @@
   &.card-job{
     --card-spacer-y: 0;
     --card-spacer-x: 0;
+    border: none;
     --card-cap-padding-y: 0;
     --card-cap-padding-x: 0;
     --card-box-shadow: 0px 12px 60px 0px rgba(156, 161, 186, 16%);
@@ -133,6 +134,7 @@
     }
   }
   &.card-blog{
+    border: none;
     --card-spacer-y: 16px;
     --card-spacer-x: 16px;
     --card-border-radius: 16px;

@@ -9,6 +9,10 @@ $('.owl-carousel.category-carousel').owlCarousel({
     loop: true,
     dots: false,
     nav: false,
+    autoWidth: true,
+    autoplay: true,
+    autoplayTimeout:3000,
+    margin: 32,
     responsive: {
         0: {
             items: 1
@@ -27,20 +31,12 @@ $('.owl-carousel.category-carousel').owlCarousel({
 $('.owl-carousel.advertise-carousel').owlCarousel({
     loop: true,
     dots: false,
+    autoWidth: true,
+    margin: 32,
+    autoplay: true,
+    autoplayTimeout:3000,
     nav: false,
-    responsive: {
-        0: {
-            items: 1
-        },
-
-        768: {
-            items: 2
-        },
-
-        1400: {
-            items: 3
-        }
-    }
+    items: 4
 })
 
 
@@ -48,7 +44,8 @@ $('.owl-carousel.advertise-carousel').owlCarousel({
 $('.owl-carousel.category-propose-carousel').owlCarousel({
     loop: true,
     items: 1,
-    dots: true
+    dots: true,
+    margin: 10
 })
 $('.owl-carousel.slider-carousel').owlCarousel({
     loop: false,
@@ -75,6 +72,7 @@ blogOwl.owlCarousel({
     loop: false,
     nav: true,
     dots: true,
+    navText: ['<','>'],
     navContainer: '#blog-custom-owl-nav',
     dotsContainer: '#blog-custom-owl-dots',
     margin: 15,
