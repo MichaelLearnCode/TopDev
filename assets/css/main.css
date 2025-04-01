@@ -2106,163 +2106,163 @@ h1, .h3 {
   }
 }
 .display-1 {
-  line-height: 110%;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-size: 16px;
+  line-height: 110% !important;
+  letter-spacing: 1px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
 }
 
 .display-2 {
-  line-height: 135%;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  font-size: 12px;
+  line-height: 135% !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
 }
 
 @media (min-width: 768px) {
   .display-1 {
-    line-height: 110%;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 20px;
+    line-height: 110% !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
   }
 }
 @media (min-width: 768px) {
   .display-2 {
-    line-height: 135%;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-    font-size: 16px;
+    line-height: 135% !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
   }
 }
 .big-title-1 {
-  line-height: 130%;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-size: 32px;
+  line-height: 130% !important;
+  letter-spacing: 1px !important;
+  font-weight: 600 !important;
+  font-size: 32px !important;
 }
 
 .big-title-2 {
-  line-height: 125%;
-  letter-spacing: 1px;
-  font-weight: 700;
-  font-size: 24px;
+  line-height: 125% !important;
+  letter-spacing: 1px !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
 }
 
 @media (min-width: 768px) {
   .big-title-1 {
-    line-height: 130%;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 40px;
+    line-height: 130% !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    font-size: 40px !important;
   }
 }
 @media (min-width: 768px) {
   .big-title-2 {
-    line-height: 125%;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 32px;
+    line-height: 125% !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    font-size: 32px !important;
   }
 }
 .heading-1 {
-  line-height: 135%;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  font-size: 18px;
+  line-height: 135% !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
 }
 
 .heading-2 {
-  line-height: 135%;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  font-size: 16px;
+  line-height: 135% !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
 }
 
 @media (min-width: 768px) {
   .heading-1 {
-    line-height: 134%;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 24px;
+    line-height: 134% !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    font-size: 24px !important;
   }
 }
 @media (min-width: 768px) {
   .heading-2 {
-    line-height: 130%;
-    letter-spacing: 0;
-    font-weight: 600;
-    font-size: 20px;
+    line-height: 130% !important;
+    letter-spacing: 0 !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
   }
 }
 .description {
-  line-height: 142%;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-  font-size: 18px;
+  line-height: 142% !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
 }
 
 .description-small {
-  line-height: 135%;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-size: 10px;
+  line-height: 135% !important;
+  letter-spacing: 0 !important;
+  font-weight: 400 !important;
+  font-size: 10px !important;
 }
 
 .button-label {
-  line-height: 140%;
-  letter-spacing: 0;
-  font-weight: 700;
-  font-size: 16px;
+  line-height: 140% !important;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
 }
 
 .body-1 {
-  line-height: 140%;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-size: 16px;
+  line-height: 140% !important;
+  letter-spacing: 0 !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
 }
 
 .body-2 {
-  line-height: 130%;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-size: 14px;
+  line-height: 130% !important;
+  letter-spacing: 0 !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
 }
 
 .sub-heading {
-  line-height: 130%;
-  letter-spacing: 0;
-  font-weight: 600;
-  font-size: 14px;
+  line-height: 130% !important;
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
 }
 
 .small-caption {
-  line-height: 135%;
-  letter-spacing: 0;
-  font-weight: 500;
-  font-size: 12px;
+  line-height: 135% !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
 }
 
 .extrag-small {
-  line-height: 150%;
-  letter-spacing: 0;
-  font-weight: 600;
-  font-size: 10px;
+  line-height: 150% !important;
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+  font-size: 10px !important;
 }
 
 .small-headline {
-  line-height: 135%;
-  letter-spacing: 1px;
-  font-weight: 500;
-  font-size: 12px;
+  line-height: 135% !important;
+  letter-spacing: 1px !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
 }
 
 .extra-small {
-  line-height: 135%;
-  letter-spacing: 0;
-  font-weight: 600;
-  font-size: 10px;
+  line-height: 135% !important;
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+  font-size: 10px !important;
 }
 
 .align-baseline {
@@ -9581,6 +9581,10 @@ h1, .h3 {
     text-align: center !important;
   }
 }
+.bg-transparent {
+  background-color: transparent !important;
+}
+
 .gradient-text {
   background-image: var(--gradient);
   background-clip: text;
@@ -9650,6 +9654,8 @@ h1, .h3 {
 
 .today-section {
   background-image: linear-gradient(90deg, rgba(235, 39, 2, 0.1) 3.5%, rgba(255, 125, 37, 0.1) 75%, rgba(255, 157, 90, 0.1) 100%);
+  border-top: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
 
 .section-divider {
@@ -9657,8 +9663,17 @@ h1, .h3 {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-  margin: 1em 0;
   padding: 0;
+}
+
+.about-section .about-dropdown .dropdown-menu {
+  border: none;
+  box-shadow: none;
+  min-width: unset;
+}
+.about-section .about-dropdown .dropdown-item {
+  padding: 0;
+  white-space: unset;
 }
 
 @media (min-width: 768px) {

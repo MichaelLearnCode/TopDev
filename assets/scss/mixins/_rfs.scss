@@ -9,7 +9,7 @@
     .#{$name} {
         @each $key, $value in $properties {
             // @debug "Key: #{$key}, Value: #{$value}";
-            #{$key}: #{$value}; // Tạo thuộc tính CSS
+            #{$key}: #{$value} !important; // Tạo thuộc tính CSS
         }
     }
 }
