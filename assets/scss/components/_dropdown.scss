@@ -3,6 +3,7 @@
   position: relative;
   .dropdown-toggle {
     white-space: nowrap;
+    cursor: pointer;
   }
   .dropdown-arrow-down {
     width: 12px;
@@ -41,6 +42,8 @@
     color: var(--dropdown-color);
     text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
     list-style: none;
+    top: 100%;
+    left: 0;
     background-color: var(--dropdown-bg);
     background-clip: padding-box;
     border: var(--dropdown-border-width) solid var(--dropdown-border-color);

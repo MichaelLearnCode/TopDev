@@ -28,7 +28,17 @@
     border: var(--card-border-width) solid var(--card-border-color);
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow);
-
+  .card-img-wrapper{
+    position: relative;
+    &:hover > .card-img-overlay{
+      opacity: 0.1;
+    }
+  }
+  .card-img-badge{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
   .card-body {
     flex: 1 1 auto;
     padding: var(--card-spacer-y) var(--card-spacer-x);
@@ -79,6 +89,9 @@
     right: 0;
     bottom: 0;
     left: 0;
+    transition: opacity ease 0.1s;
+    opacity: 0;
+    background-color: #000;
     padding: var(--card-img-overlay-padding);
     border-top-left-radius: var(--card-border-radius);
     border-top-right-radius: var(--card-border-radius);
@@ -88,6 +101,7 @@
   .card-img-top,
   .card-img-bottom {
     width: 100%; 
+    object-fit: cover;
   }
   
   .card-img,
@@ -139,5 +153,10 @@
     --card-spacer-x: 16px;
     --card-border-radius: 16px;
     --card-box-shadow: 0px 12px 60px 0px rgba(156, 161, 186, 16%);
+    .card-img-badge{
+      background-color: rgba(255, 255, 255, 0.24);
+      color: #fff;
+      border-radius: 20px;
+    }
   }
 }
