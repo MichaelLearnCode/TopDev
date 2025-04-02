@@ -155,3 +155,13 @@ if (navForm){
     },{rootMargin: '-200px 0px 0px 0px'});
     observer.observe(document.querySelector("#hero-section-search-form"));
 }
+
+const customControllerLeft = document.querySelector('.blog-carousel-controller .owl-prev')
+console.log(customControllerLeft)
+console.log(customControllerLeft.clientHeight);
+const customControllerRight = $('.blog-carousel-controller .owl-next');
+
+$(document).ready(function(){
+    alert(customControllerLeft.clientWidth);
+    alert(customControllerLeft.clientHeight);
+  });
