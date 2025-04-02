@@ -12,6 +12,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all ease 0.2s;
         > button.owl-dot{
             background-color: var(--dot-bg);
             opacity: 50%;
@@ -72,11 +73,8 @@
     align-items: center;
     gap: 12px;
     button.owl-prev, button.owl-next{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 27px;
-        height: 27px;
+        width: 1.9rem;
+        height: 1.9rem;
         background-color: transparent;
         border: 2px solid var(--neutral-gray-6);
         border-radius: 50%;
