@@ -3,7 +3,8 @@ import Dropdown from './components/Dropdown.js';
 
 Dropdown({ dropdownClass: 'js-dropdown-language' }).init();
 Dropdown({ dropdownClass: 'js-dropdown-profile' }).init();
-Dropdown({ dropdownClass: 'js-dropdown-location' }).init();
+Dropdown({ dropdownClass: 'js-dropdown-location-1' }).init();
+Dropdown({ dropdownClass: 'js-dropdown-location-2' }).init();
 Dropdown({ dropdownClass: 'js-dropdown-about-1' }).init();
 Dropdown({ dropdownClass: 'js-dropdown-about-2' }).init();
 Dropdown({ dropdownClass: 'js-dropdown-about-3' }).init();

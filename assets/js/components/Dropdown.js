@@ -9,6 +9,7 @@ const Dropdown = function({
 }){
     const dropdown = document.querySelector(`.${dropdownClass}`);
     if (!dropdown)return;
+    console.log(dropdown);
     const dropdownContent = dropdown.querySelector(`.${dropdownContentClass}`)
     if (!dropdownContent)return;
     function init(){
