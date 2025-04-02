@@ -358,6 +358,7 @@ h1, .h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all ease 0.2s;
 }
 .owl-carousel .owl-dots > button.owl-dot {
   background-color: var(--dot-bg);
@@ -374,6 +375,7 @@ h1, .h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  aspect-ratio: 1/1;
   width: var(--nav-diameter);
   height: var(--nav-diameter);
   background-color: var(--nav-bg);
@@ -407,11 +409,8 @@ h1, .h3 {
   gap: 12px;
 }
 #blog-custom-owl-nav button.owl-prev, #blog-custom-owl-nav button.owl-next {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 27px;
-  height: 27px;
+  width: 1.9rem;
+  height: 1.9rem;
   background-color: transparent;
   border: 2px solid var(--neutral-gray-6);
   border-radius: 50%;
