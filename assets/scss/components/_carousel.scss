@@ -74,13 +74,14 @@
     align-items: center;
     gap: 12px;
     button.owl-prev, button.owl-next{
-        width: 0rem;
-        height: 0rem;
+        width: 1.9rem;
+        height: 1.9rem;
         aspect-ratio: 1/1;
         background-color: transparent;
         border: 2px solid var(--neutral-gray-6);
         border-radius: 50%;
         font-size: 1.2rem;
+        padding: 0;
         color: var(--neutral-gray-6);
         &.disabled{
             border-color: var(--primary);
