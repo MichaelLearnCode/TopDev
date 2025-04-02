@@ -409,8 +409,9 @@ h1, .h3 {
   gap: 12px;
 }
 #blog-custom-owl-nav button.owl-prev, #blog-custom-owl-nav button.owl-next {
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 4rem;
+  height: 4rem;
+  aspect-ratio: 1/1;
   background-color: transparent;
   border: 2px solid var(--neutral-gray-6);
   border-radius: 50%;
