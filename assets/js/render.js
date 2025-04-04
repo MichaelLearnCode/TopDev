@@ -76,11 +76,8 @@ export default function render() {
     }
     const firstBlogCarousel = $('.owl-carousel.blog-carousel').owlCarousel({
       loop: false,
-      nav: true,
-      dots: true,
-      navText: ['<', '>'],
-      navContainer: '#blog-custom-owl-nav',
-      dotsContainer: '#blog-custom-owl-dots',
+      nav: false,
+      dots: false,
       margin: 15,
       responsive: {
         0: {
