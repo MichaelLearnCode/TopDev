@@ -1,42 +1,241 @@
 import { Api } from "../api/api.js";
+import Components from "./components.js";
+import Tab from "./components/Tab.js";
 
-export default async function render(){
-    const api = Api().init();
-    // 
-    const blogCarousel = document.querySelector('.blog-carousel');
-    const blogData = await api.get('blogs');
-    const renderedBlogs = [];
-    blogData.forEach(blog=>{
-        const date = new Date(blog.createdAt);
-        renderedBlogs.push(`<div class="card mt-4 card-blog" key = "${blog.id}">
-          <div class="card-img-wrapper">
-            <img src="${blog.imgUrl}" alt="" style="aspect-ratio: 3/2;"
-              class="card-img card-img-top" />
-            <div class="card-img-overlay"></div>
-            <div class="badge small-headline card-img-badge py-2 px-4">${blog.field}</div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title mb-3 display-2">
-              ${blog.title}
-            </h3>
-            <p class="card-text card-content body-1">
-              ${blog.content}
-            </p>
-            <div class="mt-4 d-flex justify-between items-center">
-              <span class="small-headline text-medium">${`${date.toLocaleDateString('en-US',{month: 'long', day: 'numeric'})}, ${date.getFullYear()}`}</span>
-              <a href="#" class="d-flex items-center text-primary text-decoration-none">
-                <span class="small-headline me-2">Read More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                  <path
-                    d="M5.13312 3.8092L3.81979 2.49587L1.67979 0.355869C1.22646 -0.0907975 0.453125 0.229203 0.453125 0.869203V5.02254V8.76254C0.453125 9.40254 1.22646 9.72254 1.67979 9.2692L5.13312 5.81587C5.68646 5.2692 5.68646 4.36254 5.13312 3.8092Z"
-                    fill="#E24C32" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>`)
+export default function render() {
+  const api = Api().init();
+  const components = Components();
+  // cong viec hot
+  async function renderHotJobsCarousel() {
+    const hotJobsCarousel = document.querySelector('.hot-jobs-carousel');
+    for (let i = 0; i < 5; i++) {
+      const skeletonJobCard = components.createSkeletonJobCard();
+      hotJobsCarousel.appendChild(skeletonJobCard);
+    }
+    const firstHotJobsCarousel = $('.owl-carousel.hot-jobs-carousel').owlCarousel({
+      loop: false,
+      dots: false,
+      nav: true,
+      margin: 15,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        992: {
+          items: 3
+        },
+        1440: {
+          items: 4
+        }
+      }
     })
-    blogCarousel.innerHTML = renderedBlogs.join('');
+    const hotJobsData = await api.get('jobs');
+    firstHotJobsCarousel.trigger('destroy.owl.carousel');
+    hotJobsCarousel.innerHTML = '';
+    hotJobsData.forEach(job => {
+      const jobCard = components.createJobCard({
+        title: job.title,
+        thumbnail: job.thumbnail,
+        salary: job.salary,
+        id: job.id,
+        locationType: job.locationType,
+        type: job.type,
+        description: job.description
+      })
+      hotJobsCarousel.appendChild(jobCard)
+    });
+    $('.owl-carousel.hot-jobs-carousel').owlCarousel({
+      loop: false,
+      dots: false,
+      nav: true,
+      margin: 15,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        992: {
+          items: 3
+        },
+        1440: {
+          items: 4
+        }
+      }
+    })
+  }
+  async function renderBlogsCarousel() {
+    const blogCarousel = document.querySelector('.blog-carousel');
+    for (let i = 0; i < 5; i++) {
+      const skeletonBlogCard = components.createSkeletonBlogCard();
+      blogCarousel.appendChild(skeletonBlogCard);
+    }
+    const firstBlogCarousel = $('.owl-carousel.blog-carousel').owlCarousel({
+      loop: false,
+      nav: true,
+      dots: true,
+      navText: ['<', '>'],
+      navContainer: '#blog-custom-owl-nav',
+      dotsContainer: '#blog-custom-owl-dots',
+      margin: 15,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0
+        },
+        992: {
+          margin: 16,
+          items: 2
+        },
+        1440: {
+          items: 3,
+          margin: 32
+        }
+      }
+    })
+    const blogData = await api.get('blogs');
+    firstBlogCarousel.trigger('destroy.owl.carousel');
+    blogCarousel.innerHTML = '';
+    blogData.forEach(blog => {
+      const blogCard = components.createBlogCard({
+        createdAt: blog.createdAt,
+        title: blog.title,
+        imgUrl: blog.imgUrl,
+        content: blog.content,
+        field: blog.field,
+        id: blog.id
+      })
+      blogCarousel.appendChild(blogCard);
+    });
+    const blogOwl = $('.owl-carousel.blog-carousel')
+    blogOwl.owlCarousel({
+      loop: false,
+      nav: true,
+      dots: true,
+      navText: ['<', '>'],
+      navContainer: '#blog-custom-owl-nav',
+      dotsContainer: '#blog-custom-owl-dots',
+      margin: 15,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0
+        },
+        992: {
+          margin: 16,
+          items: 2
+        },
+        1440: {
+          items: 3,
+          margin: 32
+        }
+      }
+    })
+    $('#blog-custom-owl-nav .owl-next').click(function () {
+      blogOwl.trigger('next.owl.carousel');
+    })
+    $('#blog-custom-owl-nav .owl-prev').click(function () {
+      blogOwl.trigger('prev.owl.carousel');
+    })
+    $('#blog-custom-owl-dots .owl-dot').click(function () {
+      blogOwl.trigger('to.owl.carousel', [$(this).index(), 300]);
+    });
+    blogOwl.on('initialize.owl.carousel changed.owl.carousel resized.owl.carousel', function (e) {
+      owl_carousel_page_numbers(e);
+    });
+    function owl_carousel_page_numbers(e) {
+      //if (!e.namespace || e.property.name != 'position') return;
+      //console.log('work');
+      var items_per_page = e.page.size;
 
+      if (items_per_page > 1) {
+
+        var min_item_index = e.item.index,
+          max_item_index = min_item_index + items_per_page,
+          display_text = (min_item_index + 1) + '-' + max_item_index;
+
+      } else {
+
+        var display_text = (e.item.index + 1);
+
+      }
+
+      $('.blog-page-number').text(display_text + '/' + e.item.count);
+
+    }
+  }
+  async function renderTabJobsCarousel() {
+    const suggestTab = document.querySelector('.suggest-tab');
+    const suggestTabHeader = suggestTab.querySelector('.tab-header');
+    const suggestTabBody = suggestTab.querySelector('.tab-body');
+
+    const skeletonContent = document.createElement('div');
+    skeletonContent.classList = 'row row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 justify-center justify-sm-start gy-4 gy-sm-5 gy-md-6 gy-xl-7 gy-xxl-8 gx-4';
+    for (let i = 0; i < 5; i++) {
+      const skeletonButton = components.createSkeletonButton();
+      suggestTabHeader.appendChild(skeletonButton);
+      const skeletonCard = components.createSkeletonJobCard();
+      skeletonContent.appendChild(skeletonCard);
+    }
+    suggestTabBody.appendChild(skeletonContent);
+    const tabJobs = await api.get('jobs');
+    suggestTabHeader.innerHTML = `<button data-tab-target="#all" class="btn btn-job button-label js-tab-trigger active">Tất cả</button>`
+    suggestTabBody.innerHTML = '';
+    const locations = await api.get('locations');
+    const allLocationContentElement = document.createElement('div');
+    allLocationContentElement.id = 'all';
+    allLocationContentElement.classList = 'tab-content js-tab-content row row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 justify-center justify-sm-start gy-4 gy-sm-5 gy-md-6 gy-xl-7 gy-xxl-8 gx-4';
+    tabJobs.forEach(job => {
+      const jobTabCard = components.createTabJobCard({
+        title: job.title,
+        thumbnail: job.thumbnail,
+        salary: job.salary,
+        id: job.id,
+        locationType: job.locationType,
+        type: job.type,
+        description: job.description
+      });
+      allLocationContentElement.append(jobTabCard);
+    });
+    suggestTabBody.append(allLocationContentElement);
+    locations.forEach(location => {
+      const locationBtnElement = document.createElement('button');
+      locationBtnElement.setAttribute('data-tab-target', '#' + location.slug);
+      locationBtnElement.classList = 'btn btn-job button-label js-tab-trigger';
+      locationBtnElement.textContent = location.name;
+      suggestTabHeader.appendChild(locationBtnElement);
+      const locationContentElement = document.createElement('div');
+      locationContentElement.id = location.slug;
+      locationContentElement.classList = 'tab-content js-tab-content row row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 justify-center justify-sm-start gy-4 gy-sm-5 gy-md-6 gy-xl-7 gy-xxl-8 gx-4';
+      tabJobs.forEach(job => {
+        if (job.location.slug === location.slug) {
+          const jobTabCard = components.createTabJobCard({
+            title: job.title,
+            thumbnail: job.thumbnail,
+            salary: job.salary,
+            id: job.id,
+            locationType: job.locationType,
+            type: job.type,
+            description: job.description
+          });
+          locationContentElement.appendChild(jobTabCard);
+        }
+      })
+      suggestTabBody.appendChild(locationContentElement);
+    });
+    Tab({ tabClass: 'js-suggest-tab' }).init();
+  }
+  // tab
+
+
+  // blog
+  return {
+    renderHotJobsCarousel,
+    renderBlogsCarousel,
+    renderTabJobsCarousel
+  }
 }
-
