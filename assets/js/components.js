@@ -21,11 +21,27 @@ export default function Components() {
         // Render the card
         return renderElement(card);
     }
+    function createSkeletonSearchSuggestion() {
+        const suggestionItem = document.createElement('li');
+        suggestionItem.className = 'search-suggestion-item';
+        const span = document.createElement('span');
+        span.className = 'skeleton skeleton-text';
+        suggestionItem.appendChild(span);
+        return suggestionItem;
+
+    }
     function createSkeletonButton() {
         const button = createElement('button', {
             className: 'btn btn-job button-label skeleton'
         });
         return renderElement(button);
+    }
+    function createSkeletonTabJobCard(){
+        const col = document.createElement('div');
+        col.className = 'col';
+        const card = createSkeletonJobCard();
+        col.appendChild(card);
+        return col;
     }
     function createSkeletonJobCard() {
         const card = createElement('div', { className: 'card p-4 card-job d-flex flex-column rounded-4 bg-white' });
@@ -181,6 +197,8 @@ export default function Components() {
         return cardWrapperEle;
     }
     return {
+        createSkeletonTabJobCard,
+        createSkeletonSearchSuggestion,
         createSkeletonBlogCard,
         createSkeletonButton,
         createSkeletonJobCard,

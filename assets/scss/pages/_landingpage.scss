@@ -122,6 +122,24 @@
     .banner {
         width: 100%;
     }
+    .search-suggestion{
+        position: absolute;
+        top:100%;
+        left: 0;
+        display: none;
+        &.active{
+            display: block;
+        }
+        .search-suggestion-item{
+            display: flex;
+            align-items: center;
+            padding: 4px 8px;
+            img{
+                margin-right: 5px;
+                height: 20px;
+            }
+        }
+    }
 
     .search-input {
         position: relative;

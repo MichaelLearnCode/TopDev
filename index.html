@@ -20,7 +20,7 @@
 
 <body>
   <img src="./assets/image/hero-section/img_background.png" class="position-absolute w-100 mt-14"
-    style="filter: blur(100px);" alt="">
+    style="filter: blur(100px); z-index: -1;" alt="">
   <nav class="navbar p-0">
     <div class="bg-dark w-100">
       <div class="d-none d-xl-flex container justify-between px-4 py-2">
@@ -70,9 +70,11 @@
     <div class="bg-transparent bg-md-white w-100">
       <div class="container py-4 d-flex items-center justify-between px-4">
         <div class="navbar-brand p-0 d-none d-md-block">
-          <img src="./assets/image/header/img_logo.png" max-width="210" max-height="40" alt="">
+          <a href="./index.html">
+            <img src="./assets/image/header/img_logo.png" max-width="210" max-height="40" alt="">
+          </a>
         </div>
-        <div class="nav-form">
+        <!-- <div class="nav-form">
           <form action="">
             <div class="d-flex flex-center">
               <div class="gap-2 d-md-flex w-100 flex-column flex-md-row items-center justify-md-center">
@@ -105,12 +107,11 @@
 
                   <button class="btn flex-fill search-btn py-3 px-3 px-xl-6 w-md-auto btn-dark button-label">Tìm
                     kiếm</button>
-                  <!--  -->
                 </div>
               </div>
             </div>
           </form>
-        </div>
+        </div> -->
         <div class="d-flex items-center justify-between w-100 w-md-auto gap-md-8 flex-md-row-reverse">
           <div class="nav-item">
             <div class="dropdown dropdown-profile js-dropdown-profile">
@@ -163,17 +164,19 @@
               <div class="gap-2 d-md-flex w-100 flex-column flex-md-row items-center justify-md-center">
                 <div class="search-input flex-fill">
                   <input class="w-100" type="text" placeholder="Công việc bạn đang tìm ?">
+                  <ul class="search-suggestion w-100 bg-white shadow">
+                  </ul>
                   <span class="search-icon">
                     <img width="20" height="20" src="./assets/image/hero-section/icon/img_icon_search.png" alt="">
                   </span>
                 </div>
                 <div class="mt-2 mt-md-0 gap-2 d-flex items-center">
-                  <div class="dropdown w-md-auto location-btn dropdown-with-icon js-dropdown-location-1">
+                  <div class="dropdown w-md-auto location-btn dropdown-with-icon js-dropdown-location js-dropdown-location-1">
                     <button type="button" class="btn w-100 gap-6 body-1 d-flex items-center dropdown-toggle">
                       <div class="dropdown-icon">
                         <img src="./assets/image/spotlight-section/icon/img_icon_location.png" alt="">
                       </div>
-                      Vị trí
+                      <span class="dropdown-label">Vị trí</span>
                       <svg class="dropdown-arrow-down" xmlns="http://www.w3.org/2000/svg" width="14" height="8"
                         viewBox="0 0 14 8" fill="none">
                         <path d="M1 1.2187L4 4.21021L7 7.20171L13 1.2187" stroke-width="1.5" stroke-linecap="round"
@@ -181,13 +184,11 @@
                       </svg>
                     </button>
                     <ul class="dropdown-menu js-dropdown-content">
-                      <li><a class="dropdown-item" href="#">Hà Nội</a></li>
-                      <li><a class="dropdown-item" href="#">TP.HCM</a></li>
-                      <li><a class="dropdown-item" href="#">Hạ Long</a></li>
+                      
                     </ul>
                   </div>
 
-                  <button class="btn flex-fill search-btn py-3 px-md-8 px-xl-12 w-md-auto btn-dark button-label">Tìm
+                  <button class="search-submit-btn btn flex-fill search-btn py-3 px-md-8 px-xl-12 w-md-auto btn-dark button-label">Tìm
                     kiếm</button>
                   <!--  -->
                 </div>

@@ -9713,6 +9713,24 @@ h1, .h3 {
 .hero-section .banner {
   width: 100%;
 }
+.hero-section .search-suggestion {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.hero-section .search-suggestion.active {
+  display: block;
+}
+.hero-section .search-suggestion .search-suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+.hero-section .search-suggestion .search-suggestion-item img {
+  margin-right: 5px;
+  height: 20px;
+}
 .hero-section .search-input {
   position: relative;
 }

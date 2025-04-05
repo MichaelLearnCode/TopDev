@@ -37,8 +37,18 @@ function Api(){
             throw err;
         }
     }
-    function get(endpoint){
-        return request(endpoint, 'GET');
+    async function get(endpoint,{
+        limit,
+        custom
+    } = {}){
+        let data = await request(endpoint, 'GET');
+        if (custom){
+            data = data.filter((datum, index)=>{
+                return custom(datum, index, data);
+            })
+        }
+        if (limit && data.length > limit)data.splice(limit);
+        return data;
     }
 
     function post(endpoint, bodyData, headers){

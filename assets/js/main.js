@@ -57,16 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
     //         }
     //     }
     // })
-    
+
     // blog carousel
-    
+
 
     // 
     const navForm = document.querySelector('.nav-form');
     Dropdown({ dropdownClass: 'js-dropdown-language' }).init();
     Dropdown({ dropdownClass: 'js-dropdown-profile' }).init();
-    Dropdown({ dropdownClass: 'js-dropdown-location-1' }).init();
-    Dropdown({ dropdownClass: 'js-dropdown-location-2' }).init();
+    // Dropdown({ dropdownClass: 'js-dropdown-location-2' }).init();
     Dropdown({ dropdownClass: 'js-dropdown-about-1' }).init();
     Dropdown({ dropdownClass: 'js-dropdown-about-2' }).init();
     Dropdown({ dropdownClass: 'js-dropdown-about-3' }).init();
@@ -84,6 +83,45 @@ document.addEventListener('DOMContentLoaded', () => {
     instance.renderBlogsCarousel();
     instance.renderHotJobsCarousel();
     instance.renderTabJobsCarousel();
+    instance.renderDropdownContent();
+    //form
+    let locationParam = new URL(window.location).searchParams.get('location');
+    const heroSection = document.querySelector('.hero-section');
+    const searchInput = heroSection.querySelector('.search-input input');
+    const searchForm = heroSection.querySelector('#hero-section-search-form');
+    searchForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        window.location.href = `search-results.html?search=${searchInput.value}&location=${locationParam??''}`; 
+    })
+    const updateSearchSuggestion = debounce((input)=>{
+        instance.renderSearchSuggestion(input)
+    })
+    const searchSuggestionEle = heroSection.querySelector('.search-suggestion');
+    searchInput.addEventListener('focus',e=>{
+        searchSuggestionEle.classList.add('active');
+        const currentLocationParam = new URL(window.location).searchParams.get('location');
+        if (locationParam !== currentLocationParam){
+            locationParam = currentLocationParam;
+            instance.renderSearchSuggestion(searchInput.value);
+        }
+    })
+    searchInput.addEventListener('blur', e=>{
+        searchSuggestionEle.classList.remove('active');
+    })
+    searchInput.addEventListener('input', e=>{
+        updateSearchSuggestion(e.target.value);
+    })
+    
+    function debounce(cb, delay = 1000){
+        let timeout;
+        return (args)=>{
+            clearTimeout(timeout);
+            timeout = setTimeout(()=>{
+                cb(args)
+            }, delay)
+        }
+    }
+    
     $('.owl-carousel.category-carousel').owlCarousel({
         loop: true,
         dots: false,
