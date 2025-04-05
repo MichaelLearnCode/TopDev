@@ -1,6 +1,10 @@
 import render from './render.js';
 import Components from './components.js';
 import { Api } from '../api/api.js';
+import Dropdown from './components/Dropdown.js';
+Dropdown({ dropdownClass: 'js-dropdown-about-1' }).init();
+Dropdown({ dropdownClass: 'js-dropdown-about-2' }).init();
+Dropdown({ dropdownClass: 'js-dropdown-about-3' }).init();
 const api = Api().init();
 const instance = render();
 const components = Components();
