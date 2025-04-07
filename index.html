@@ -77,7 +77,7 @@
         <!-- <div class="nav-form">
           <form action="">
             <div class="d-flex flex-center">
-              <div class="gap-2 d-md-flex w-100 flex-column flex-md-row items-center justify-md-center">
+              <div class="gap-2 d-md-flex fw-100 flex-column flex-md-row items-center justify-md-center">
                 <div class="search-input flex-fill">
                   <input class="w-100" type="text" placeholder="Công việc bạn đang tìm ?">
                   <span class="search-icon">
@@ -113,31 +113,8 @@
           </form>
         </div> -->
         <div class="d-flex items-center justify-between w-100 w-md-auto gap-md-8 flex-md-row-reverse">
-          <div class="nav-item">
-            <div class="dropdown dropdown-profile js-dropdown-profile">
-              <button class="btn gap-4 d-flex items-center dropdown-toggle px-0 px-md-4">
-                <div class="dropdown-avatar">
-                  <img width="40" height="40" src="./assets/image/header/img_avatar.png" alt="">
-                </div>
-                <div class="d-flex flex-column text-start">
-                  <span class="profile-name">Nguyễn Tấn Đạt</span>
-                  <span class="profile-role button-label">UI UX</span>
-                </div>
-                <svg class="dropdown-arrow-down" xmlns="http://www.w3.org/2000/svg" width="14" height="8"
-                  viewBox="0 0 14 8" fill="none">
-                  <path d="M1 1.0085L7 6.9915L13 1.0085" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button>
-              <ul class="dropdown-menu js-dropdown-content">
-                <li><a class="dropdown-item" href="#">Thông tin</a></li>
-                <li><a class="dropdown-item" href="#">Cài đặt</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-              </ul>
-            </div>
+          <div class="nav-item profile-holder">
+            <button class="text-primary login-modal-trigger body-1 bg-transparent border-0 cursor-pointer js-login-modal-trigger">Đăng nhập</button>
           </div>
           <div class="nav-item">
             <button class="nav-bell">
@@ -161,8 +138,9 @@
         <form id="hero-section-search-form" action="">
           <div class="row justify-center">
             <div class="col-12 col-col-md-10 col-lg-9 col-xl-8">
-              <div class="gap-2 d-md-flex w-100 flex-column flex-md-row items-center justify-md-center">
-                <div class="search-input flex-fill">
+              <div
+                class="gap-2 position-md-relative d-md-flex w-100 flex-column flex-md-row items-center justify-md-center">
+                <div class="search-input position-relative position-md-static flex-fill">
                   <input class="w-100" type="text" placeholder="Công việc bạn đang tìm ?">
                   <ul class="search-suggestion w-100 bg-white shadow">
                   </ul>
@@ -171,7 +149,8 @@
                   </span>
                 </div>
                 <div class="mt-2 mt-md-0 gap-2 d-flex items-center">
-                  <div class="dropdown w-md-auto location-btn dropdown-with-icon js-dropdown-location js-dropdown-location-1">
+                  <div
+                    class="dropdown w-md-auto location-btn dropdown-with-icon js-dropdown-location js-dropdown-location-1">
                     <button type="button" class="btn w-100 gap-6 body-1 d-flex items-center dropdown-toggle">
                       <div class="dropdown-icon">
                         <img src="./assets/image/spotlight-section/icon/img_icon_location.png" alt="">
@@ -184,11 +163,12 @@
                       </svg>
                     </button>
                     <ul class="dropdown-menu js-dropdown-content">
-                      
+
                     </ul>
                   </div>
 
-                  <button class="search-submit-btn btn flex-fill search-btn py-3 px-md-8 px-xl-12 w-md-auto btn-dark button-label">Tìm
+                  <button
+                    class="search-submit-btn btn flex-fill search-btn py-3 px-md-8 px-xl-12 w-md-auto btn-dark button-label">Tìm
                     kiếm</button>
                   <!--  -->
                 </div>
@@ -291,129 +271,7 @@
           <div class="container px-4 px-md-0">
             <h2 class="heading-2 mb-4">Đề xuất cho bạn</h2>
             <div class="owl-carousel category-propose-carousel">
-              <div class="card p-4 card-job d-flex flex-column rounded-4 bg-white">
-                <div class="card-header gap-4 pb-5 d-flex items-center">
-                  <div class="card-logo d-flex flex-center">
-                    <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
-                    <span class="extra-small text-primary">Up to 5000$</span>
-                  </div>
-                  <img class="card-archive-tick" src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png"
-                    alt="">
-                </div>
-                <div class="card-body pt-5">
-                  <div class="d-flex mb-2">
-                    <div class="card-icon d-flex me-4">
-                      <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
-                      <span class="small-headline">Remot</span>
-                    </div>
-                    <div class="card-icon d-flex">
-                      <div class="me-1 d-flex flex-center">
-                        <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
-                      </div>
-                      <span class="small-headline">Full Time</span>
-                    </div>
-                  </div>
-                  <div class="card-desc description-small">
-                    We are looking for a dynamic Web designer who will be responsible...
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="card p-4 card-job d-flex flex-column rounded-4 bg-white">
-                <div class="card-header gap-4 pb-5 d-flex items-center">
-                  <div class="card-logo d-flex flex-center">
-                    <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
-                    <span class="extra-small text-primary">Up to 5000$</span>
-                  </div>
-                  <img class="card-archive-tick" src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png"
-                    alt="">
-                </div>
-                <div class="card-body pt-5">
-                  <div class="d-flex mb-2">
-                    <div class="card-icon d-flex me-4">
-                      <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
-                      <span class="small-headline">Remot</span>
-                    </div>
-                    <div class="card-icon d-flex">
-                      <div class="me-1 d-flex flex-center">
-                        <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
-                      </div>
-                      <span class="small-headline">Full Time</span>
-                    </div>
-                  </div>
-                  <div class="card-desc description-small">
-                    We are looking for a dynamic Web designer who will be responsible...
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="card p-4 card-job d-flex flex-column rounded-4 bg-white">
-                <div class="card-header gap-4 pb-5 d-flex items-center">
-                  <div class="card-logo d-flex flex-center">
-                    <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
-                    <span class="extra-small text-primary">Up to 5000$</span>
-                  </div>
-                  <img class="card-archive-tick" src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png"
-                    alt="">
-                </div>
-                <div class="card-body pt-5">
-                  <div class="d-flex mb-2">
-                    <div class="card-icon d-flex me-4">
-                      <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
-                      <span class="small-headline">Remot</span>
-                    </div>
-                    <div class="card-icon d-flex">
-                      <div class="me-1 d-flex flex-center">
-                        <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
-                      </div>
-                      <span class="small-headline">Full Time</span>
-                    </div>
-                  </div>
-                  <div class="card-desc description-small">
-                    We are looking for a dynamic Web designer who will be responsible...
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="card p-4 card-job d-flex flex-column rounded-4 bg-white">
-                <div class="card-header gap-4 pb-5 d-flex items-center">
-                  <div class="card-logo d-flex flex-center">
-                    <img src="./assets/image/spotlight-section/logo/img_logo_acb.png" alt="acb logo">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h3 class="mt-0 mb-1 card-title display-2">Content Writer</h3>
-                    <span class="extra-small text-primary">Up to 5000$</span>
-                  </div>
-                  <img class="card-archive-tick" src="./assets/image/spotlight-section/icon/img_icon_archive-tick.png"
-                    alt="">
-                </div>
-                <div class="card-body pt-5">
-                  <div class="d-flex mb-2">
-                    <div class="card-icon d-flex me-4">
-                      <img src="./assets/image/spotlight-section/icon/img_icon_building.png" alt="building icon">
-                      <span class="small-headline">Remot</span>
-                    </div>
-                    <div class="card-icon d-flex">
-                      <div class="me-1 d-flex flex-center">
-                        <img src="./assets/image/spotlight-section/icon/img_icon_clock.png" alt="building icon">
-                      </div>
-                      <span class="small-headline">Full Time</span>
-                    </div>
-                  </div>
-                  <div class="card-desc description-small">
-                    We are looking for a dynamic Web designer who will be responsible...
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -451,7 +309,7 @@
       <h1 class="pt-8 pb-4 w-100 text-center gradient-text heading-1">Công Việc Hot Hôm Nay</h1>
       <div class="owl-carousel pt-4 pb-10 hot-jobs-carousel">
         <!-- slider content -->
-        
+
         <!--  -->
       </div>
     </div>
@@ -464,10 +322,10 @@
       <div class="tab suggest-tab js-suggest-tab">
         <div class="">
           <div class="tab-header gap-2">
-            
+
           </div>
           <div class="tab-body mt-8">
-            
+
           </div>
         </div>
       </div>
@@ -661,8 +519,12 @@
       <div class="col">
         <a href="#" class="nav-item pb-5 pt-4 d-flex flex-column justify-between items-center text-decoration-none">
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.3184 21.8529L18.3183 21.8529L13.4383 19.1429L13.4371 19.1422C13.1898 19.0058 12.8804 18.96 12.6205 18.96C12.3607 18.96 12.0513 19.0058 11.804 19.1422L11.8028 19.1429L6.9228 21.8529L6.92273 21.8529C6.44059 22.1208 5.97359 22.25 5.55555 22.25C5.21853 22.25 4.9155 22.1708 4.64573 22.0171C4.07338 21.6814 3.68555 20.9674 3.68555 19.96V5.86C3.68555 3.59614 5.53169 1.75 7.79555 1.75H17.4455C19.7094 1.75 21.5555 3.59614 21.5555 5.86V19.95C21.5555 20.9586 21.1668 21.6731 20.5933 22.0083C20.0156 22.3459 19.1991 22.3422 18.3184 21.8529ZM7.80555 2.25C5.8194 2.25 4.19555 3.87386 4.19555 5.86V19.95C4.19555 20.5845 4.37228 21.2752 4.91904 21.585C5.44512 21.8831 6.11959 21.7399 6.69044 21.4159C6.69119 21.4155 6.69194 21.4151 6.6927 21.4146L11.5679 18.7074C11.5679 18.7073 11.568 18.7073 11.568 18.7073C11.8497 18.5513 12.2276 18.4625 12.6255 18.4625C13.0235 18.4625 13.4014 18.5513 13.6831 18.7073C13.6831 18.7073 13.6832 18.7073 13.6832 18.7074L18.5584 21.4146C18.5592 21.4151 18.5599 21.4155 18.5607 21.4159C19.1203 21.7335 19.8063 21.9006 20.3428 21.5787C20.8752 21.2593 21.0555 20.5825 21.0555 19.95V5.86C21.0555 3.87386 19.4317 2.25 17.4455 2.25H7.80555Z" fill="#858585" stroke="#858585" />
-            <path d="M11.3607 11.7935L11.7143 12.147L12.0678 11.7935L15.5379 8.32349C15.6326 8.22876 15.796 8.22876 15.8907 8.32349C15.9855 8.41823 15.9855 8.58165 15.8907 8.67639L11.8907 12.6764C11.8395 12.7277 11.7788 12.7499 11.7143 12.7499C11.6497 12.7499 11.5891 12.7277 11.5379 12.6764L10.0379 11.1764C9.94311 11.0817 9.94311 10.9182 10.0379 10.8235C10.1326 10.7288 10.296 10.7288 10.3907 10.8235L10.7207 10.4935L10.3907 10.8235L11.3607 11.7935Z" fill="#858585" stroke="#858585" />
+            <path
+              d="M18.3184 21.8529L18.3183 21.8529L13.4383 19.1429L13.4371 19.1422C13.1898 19.0058 12.8804 18.96 12.6205 18.96C12.3607 18.96 12.0513 19.0058 11.804 19.1422L11.8028 19.1429L6.9228 21.8529L6.92273 21.8529C6.44059 22.1208 5.97359 22.25 5.55555 22.25C5.21853 22.25 4.9155 22.1708 4.64573 22.0171C4.07338 21.6814 3.68555 20.9674 3.68555 19.96V5.86C3.68555 3.59614 5.53169 1.75 7.79555 1.75H17.4455C19.7094 1.75 21.5555 3.59614 21.5555 5.86V19.95C21.5555 20.9586 21.1668 21.6731 20.5933 22.0083C20.0156 22.3459 19.1991 22.3422 18.3184 21.8529ZM7.80555 2.25C5.8194 2.25 4.19555 3.87386 4.19555 5.86V19.95C4.19555 20.5845 4.37228 21.2752 4.91904 21.585C5.44512 21.8831 6.11959 21.7399 6.69044 21.4159C6.69119 21.4155 6.69194 21.4151 6.6927 21.4146L11.5679 18.7074C11.5679 18.7073 11.568 18.7073 11.568 18.7073C11.8497 18.5513 12.2276 18.4625 12.6255 18.4625C13.0235 18.4625 13.4014 18.5513 13.6831 18.7073C13.6831 18.7073 13.6832 18.7073 13.6832 18.7074L18.5584 21.4146C18.5592 21.4151 18.5599 21.4155 18.5607 21.4159C19.1203 21.7335 19.8063 21.9006 20.3428 21.5787C20.8752 21.2593 21.0555 20.5825 21.0555 19.95V5.86C21.0555 3.87386 19.4317 2.25 17.4455 2.25H7.80555Z"
+              fill="#858585" stroke="#858585" />
+            <path
+              d="M11.3607 11.7935L11.7143 12.147L12.0678 11.7935L15.5379 8.32349C15.6326 8.22876 15.796 8.22876 15.8907 8.32349C15.9855 8.41823 15.9855 8.58165 15.8907 8.67639L11.8907 12.6764C11.8395 12.7277 11.7788 12.7499 11.7143 12.7499C11.6497 12.7499 11.5891 12.7277 11.5379 12.6764L10.0379 11.1764C9.94311 11.0817 9.94311 10.9182 10.0379 10.8235C10.1326 10.7288 10.296 10.7288 10.3907 10.8235L10.7207 10.4935L10.3907 10.8235L11.3607 11.7935Z"
+              fill="#858585" stroke="#858585" />
           </svg>
           <span class="small-headline mt-1">Save</span>
         </a>
@@ -670,9 +532,15 @@
       <div class="col">
         <a href="#" class="nav-item pb-5 pt-4 d-flex flex-column justify-between items-center text-decoration-none">
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.375 22.25H9.375C6.7174 22.25 4.93992 21.6803 3.8173 20.5577C2.69468 19.4351 2.125 17.6576 2.125 15V9C2.125 6.3424 2.69468 4.56492 3.8173 3.4423C4.93992 2.31968 6.7174 1.75 9.375 1.75H15.375C18.0326 1.75 19.8101 2.31968 20.9327 3.4423C22.0553 4.56492 22.625 6.3424 22.625 9V15C22.625 17.6576 22.0553 19.4351 20.9327 20.5577C19.8101 21.6803 18.0326 22.25 15.375 22.25ZM9.375 2.25C7.03472 2.25 5.29932 2.66107 4.1677 3.7927C3.03607 4.92432 2.625 6.65972 2.625 9V15C2.625 17.3403 3.03607 19.0757 4.1677 20.2073C5.29932 21.3389 7.03472 21.75 9.375 21.75H15.375C17.7153 21.75 19.4507 21.3389 20.5823 20.2073C21.7139 19.0757 22.125 17.3403 22.125 15V9C22.125 6.65972 21.7139 4.92432 20.5823 3.7927C19.4507 2.66107 17.7153 2.25 15.375 2.25H9.375Z" fill="#858585" stroke="#858585" />
-            <path d="M16.125 9.25H8.625C8.49114 9.25 8.375 9.13386 8.375 9C8.375 8.86614 8.49114 8.75 8.625 8.75H16.125C16.2589 8.75 16.375 8.86614 16.375 9C16.375 9.13386 16.2589 9.25 16.125 9.25Z" fill="#858585" stroke="#858585" />
-            <path d="M16.125 15.25H8.625C8.49114 15.25 8.375 15.1339 8.375 15C8.375 14.8661 8.49114 14.75 8.625 14.75H16.125C16.2589 14.75 16.375 14.8661 16.375 15C16.375 15.1339 16.2589 15.25 16.125 15.25Z" fill="#858585" stroke="#858585" />
+            <path
+              d="M15.375 22.25H9.375C6.7174 22.25 4.93992 21.6803 3.8173 20.5577C2.69468 19.4351 2.125 17.6576 2.125 15V9C2.125 6.3424 2.69468 4.56492 3.8173 3.4423C4.93992 2.31968 6.7174 1.75 9.375 1.75H15.375C18.0326 1.75 19.8101 2.31968 20.9327 3.4423C22.0553 4.56492 22.625 6.3424 22.625 9V15C22.625 17.6576 22.0553 19.4351 20.9327 20.5577C19.8101 21.6803 18.0326 22.25 15.375 22.25ZM9.375 2.25C7.03472 2.25 5.29932 2.66107 4.1677 3.7927C3.03607 4.92432 2.625 6.65972 2.625 9V15C2.625 17.3403 3.03607 19.0757 4.1677 20.2073C5.29932 21.3389 7.03472 21.75 9.375 21.75H15.375C17.7153 21.75 19.4507 21.3389 20.5823 20.2073C21.7139 19.0757 22.125 17.3403 22.125 15V9C22.125 6.65972 21.7139 4.92432 20.5823 3.7927C19.4507 2.66107 17.7153 2.25 15.375 2.25H9.375Z"
+              fill="#858585" stroke="#858585" />
+            <path
+              d="M16.125 9.25H8.625C8.49114 9.25 8.375 9.13386 8.375 9C8.375 8.86614 8.49114 8.75 8.625 8.75H16.125C16.2589 8.75 16.375 8.86614 16.375 9C16.375 9.13386 16.2589 9.25 16.125 9.25Z"
+              fill="#858585" stroke="#858585" />
+            <path
+              d="M16.125 15.25H8.625C8.49114 15.25 8.375 15.1339 8.375 15C8.375 14.8661 8.49114 14.75 8.625 14.75H16.125C16.2589 14.75 16.375 14.8661 16.375 15C16.375 15.1339 16.2589 15.25 16.125 15.25Z"
+              fill="#858585" stroke="#858585" />
           </svg>
           <span class="small-headline mt-1">Applied</span>
         </a>
@@ -680,11 +548,43 @@
       <div class="col">
         <a href="#" class="nav-item pb-5 pt-4 d-flex flex-column justify-between items-center text-decoration-none">
           <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.968 10.6197L12.0263 10.6217L12.0674 10.6135C12.0778 10.613 12.094 10.6125 12.1155 10.6125C12.16 10.6125 12.2147 10.6145 12.2672 10.6185L12.2978 10.6209L12.3285 10.6195C14.557 10.5171 16.3042 8.6862 16.3155 6.44253V6.44C16.3155 4.13386 14.4317 2.25 12.1255 2.25C9.8194 2.25 7.93555 4.13386 7.93555 6.44C7.93555 8.70956 9.70909 10.5402 11.968 10.6197ZM12.2855 11.12H12.2854H12.2852H12.285H12.2848H12.2847H12.2845H12.2843H12.2841H12.284H12.2838H12.2836H12.2835H12.2833H12.2831H12.2829H12.2828H12.2826H12.2824H12.2822H12.2821H12.2819H12.2817H12.2816H12.2814H12.2812H12.2811H12.2809H12.2807H12.2805H12.2804H12.2802H12.28H12.2799H12.2797H12.2795H12.2794H12.2792H12.279H12.2789H12.2787H12.2785H12.2784H12.2782H12.278H12.2779H12.2777H12.2775H12.2774H12.2772H12.277H12.2769H12.2767H12.2765H12.2764H12.2762H12.276H12.2759H12.2757H12.2755H12.2754H12.2752H12.2751H12.2749H12.2747H12.2746H12.2744H12.2742H12.2741H12.2739H12.2738H12.2736H12.2734H12.2733H12.2731H12.2729H12.2728H12.2726H12.2725H12.2723H12.2721H12.272H12.2718H12.2717H12.2715H12.2713H12.2712H12.271H12.2709H12.2707H12.2705H12.2704H12.2702H12.2701H12.2699H12.2698H12.2696H12.2694H12.2693H12.2691H12.269H12.2688H12.2686H12.2685H12.2683H12.2682H12.268H12.2679H12.2677H12.2676H12.2674H12.2672H12.2671H12.2669H12.2668H12.2666H12.2665H12.2663H12.2662H12.266H12.2658H12.2657H12.2655H12.2654H12.2652H12.2651H12.2649H12.2648H12.2646H12.2645H12.2643H12.2641H12.264H12.2638H12.2637H12.2635H12.2634H12.2632H12.2631H12.2629H12.2628H12.2626H12.2625H12.2623H12.2622H12.262H12.2619H12.2617H12.2616H12.2614H12.2613H12.2611H12.2609H12.2608H12.2606H12.2605H12.2603H12.2602H12.26H12.2599H12.2597H12.2596H12.2594H12.2593H12.2591H12.259H12.2588H12.2587H12.2585H12.2584H12.2582H12.2581H12.2579H12.2578H12.2576H12.2575H12.2573H12.2572H12.257H12.2569H12.2567H12.2566H12.2564H12.2563H12.2561H12.256H12.2559H12.2557H12.2556H12.2554H12.2553H12.2551H12.255H12.2548H12.2547H12.2545H12.2544H12.2542H12.2541H12.2539H12.2538H12.2536H12.2535H12.2533H12.2532H12.253H12.2529H12.2527H12.2526H12.2524H12.2523H12.2522H12.252H12.2519H12.2517H12.2516H12.2514H12.2513H12.2511H12.251H12.2508H12.2507H12.2505H12.2504H12.2502H12.2501H12.2499H12.2498H12.2497H12.2495H12.2494H12.2492H12.2491H12.2489H12.2488H12.2486H12.2485H12.2483H12.2482H12.248H12.2479H12.2477H12.2476H12.2475H12.2473H12.2472H12.247H12.2469H12.2467H12.2466H12.2464H12.2463H12.2461H12.246H12.2458H12.2457H12.2455H12.2454H12.2453H12.2451H12.245H12.2448H12.2447H12.2445H12.2444H12.2442H12.2441H12.2439H12.2438H12.2436H12.2435H12.2435C12.1621 11.1098 12.078 11.1106 12.0014 11.1189C9.38819 11.0178 7.43555 8.96409 7.43555 6.44C7.43555 3.85614 9.54169 1.75 12.1255 1.75C14.7091 1.75 16.815 3.85562 16.8155 6.43903C16.8061 8.97998 14.8211 11.0348 12.3073 11.12H12.3073H12.3072H12.3072H12.3071H12.3071H12.307H12.3069H12.3069H12.3068H12.3068H12.3067H12.3066H12.3066H12.3065H12.3065H12.3064H12.3063H12.3063H12.3062H12.3062H12.3061H12.3061H12.306H12.3059H12.3059H12.3058H12.3058H12.3057H12.3056H12.3056H12.3055H12.3055H12.3054H12.3054H12.3053H12.3052H12.3052H12.3051H12.3051H12.305H12.3049H12.3049H12.3048H12.3048H12.3047H12.3046H12.3046H12.3045H12.3045H12.3044H12.3044H12.3043H12.3042H12.3042H12.3041H12.3041H12.304H12.3039H12.3039H12.3038H12.3038H12.3037H12.3037H12.3036H12.3035H12.3035H12.3034H12.3034H12.3033H12.3032H12.3032H12.3031H12.3031H12.303H12.3029H12.3029H12.3028H12.3028H12.3027H12.3027H12.3026H12.3025H12.3025H12.3024H12.3024H12.3023H12.3022H12.3022H12.3021H12.3021H12.302H12.302H12.3019H12.3018H12.3018H12.3017H12.3017H12.3016H12.3015H12.3015H12.3014H12.3014H12.3013H12.3012H12.3012H12.3011H12.3011H12.301H12.301H12.3009H12.3008H12.3008H12.3007H12.3007H12.3006H12.3005H12.3005H12.3004H12.3004H12.3003H12.3003H12.3002H12.3001H12.3001H12.3H12.3H12.2999H12.2998H12.2998H12.2997H12.2997H12.2996H12.2996H12.2995H12.2994H12.2994H12.2993H12.2993H12.2992H12.2991H12.2991H12.299H12.299H12.2989H12.2988H12.2988H12.2987H12.2987H12.2986H12.2986H12.2985H12.2984H12.2984H12.2983H12.2983H12.2982H12.2981H12.2981H12.298H12.298H12.2979H12.2979H12.2978H12.2977H12.2977H12.2976H12.2976H12.2975H12.2974H12.2974H12.2973H12.2973H12.2972H12.2971H12.2971H12.297H12.297H12.2969H12.2969H12.2968H12.2967H12.2967H12.2966H12.2966H12.2965H12.2964H12.2964H12.2963H12.2963H12.2962H12.2962H12.2961H12.296H12.296H12.2959H12.2959H12.2958H12.2957H12.2957H12.2956H12.2956H12.2955H12.2954H12.2954H12.2953H12.2953H12.2952H12.2952H12.2951H12.295H12.295H12.2949H12.2949H12.2948H12.2947H12.2947H12.2946H12.2946H12.2945H12.2945H12.2944H12.2943H12.2943H12.2942H12.2942H12.2941H12.294H12.294H12.2939H12.2939H12.2938H12.2937H12.2937H12.2936H12.2936H12.2935H12.2935H12.2934H12.2933H12.2933H12.2932H12.2932H12.2931H12.293H12.293H12.2929H12.2929H12.2928H12.2928H12.2927H12.2926H12.2926H12.2925H12.2925H12.2924H12.2923H12.2923H12.2922H12.2922H12.2921H12.2921H12.292H12.2919H12.2919H12.2918H12.2918H12.2917H12.2916H12.2916H12.2915H12.2915H12.2914H12.2913H12.2913H12.2912H12.2912H12.2911H12.2911H12.291H12.2909H12.2909H12.2908H12.2908H12.2907H12.2906H12.2906H12.2905H12.2905H12.2904H12.2904H12.2903H12.2902H12.2902H12.2901H12.2901H12.29H12.2899H12.2899H12.2898H12.2898H12.2897H12.2896H12.2896H12.2895H12.2895H12.2894H12.2894H12.2893H12.2892H12.2892H12.2891H12.2891H12.289H12.2889H12.2889H12.2888H12.2888H12.2887H12.2887H12.2886H12.2885H12.2885H12.2884H12.2884H12.2883H12.2882H12.2882H12.2881H12.2881H12.288H12.2879H12.2879H12.2878H12.2878H12.2877H12.2877H12.2876H12.2875H12.2875H12.2874H12.2874H12.2873H12.2872H12.2872H12.2871H12.2871H12.287H12.287H12.2869H12.2868H12.2868H12.2867H12.2867H12.2866H12.2865H12.2865H12.2864H12.2864H12.2863H12.2863H12.2862H12.2861H12.2861H12.286H12.286H12.2859H12.2858H12.2858H12.2857H12.2857H12.2856H12.2855Z" fill="#858585" stroke="#858585" />
-            <path d="M7.15325 20.6348L7.15057 20.6331C5.86676 19.7833 5.22461 18.6655 5.22461 17.5C5.22461 16.3337 5.86769 15.2056 7.15182 14.3461C8.55332 13.4168 10.4165 12.9375 12.3021 12.9375C14.1883 12.9375 16.046 13.417 17.4369 14.3458L17.4373 14.346C18.714 15.1972 19.3646 16.3161 19.3646 17.48C19.3646 18.6465 18.7214 19.7747 17.437 20.6342C16.0353 21.5685 14.1772 22.05 12.2946 22.05C10.411 22.05 8.5437 21.568 7.15325 20.6348ZM7.42726 14.774C6.37914 15.4727 5.72461 16.4297 5.72461 17.51C5.72461 18.583 6.39206 19.5392 7.4272 20.226C8.77342 21.1285 10.549 21.5625 12.2946 21.5625C14.0404 21.5625 15.8161 21.1284 17.1624 20.2257C18.2103 19.527 18.8646 18.5702 18.8646 17.49C18.8646 16.4168 18.1969 15.4605 17.1615 14.7736C15.8153 13.8764 14.0399 13.445 12.2946 13.445C10.5491 13.445 8.77345 13.8765 7.42726 14.774Z" fill="#858585" stroke="#858585" />
+            <path
+              d="M11.968 10.6197L12.0263 10.6217L12.0674 10.6135C12.0778 10.613 12.094 10.6125 12.1155 10.6125C12.16 10.6125 12.2147 10.6145 12.2672 10.6185L12.2978 10.6209L12.3285 10.6195C14.557 10.5171 16.3042 8.6862 16.3155 6.44253V6.44C16.3155 4.13386 14.4317 2.25 12.1255 2.25C9.8194 2.25 7.93555 4.13386 7.93555 6.44C7.93555 8.70956 9.70909 10.5402 11.968 10.6197ZM12.2855 11.12H12.2854H12.2852H12.285H12.2848H12.2847H12.2845H12.2843H12.2841H12.284H12.2838H12.2836H12.2835H12.2833H12.2831H12.2829H12.2828H12.2826H12.2824H12.2822H12.2821H12.2819H12.2817H12.2816H12.2814H12.2812H12.2811H12.2809H12.2807H12.2805H12.2804H12.2802H12.28H12.2799H12.2797H12.2795H12.2794H12.2792H12.279H12.2789H12.2787H12.2785H12.2784H12.2782H12.278H12.2779H12.2777H12.2775H12.2774H12.2772H12.277H12.2769H12.2767H12.2765H12.2764H12.2762H12.276H12.2759H12.2757H12.2755H12.2754H12.2752H12.2751H12.2749H12.2747H12.2746H12.2744H12.2742H12.2741H12.2739H12.2738H12.2736H12.2734H12.2733H12.2731H12.2729H12.2728H12.2726H12.2725H12.2723H12.2721H12.272H12.2718H12.2717H12.2715H12.2713H12.2712H12.271H12.2709H12.2707H12.2705H12.2704H12.2702H12.2701H12.2699H12.2698H12.2696H12.2694H12.2693H12.2691H12.269H12.2688H12.2686H12.2685H12.2683H12.2682H12.268H12.2679H12.2677H12.2676H12.2674H12.2672H12.2671H12.2669H12.2668H12.2666H12.2665H12.2663H12.2662H12.266H12.2658H12.2657H12.2655H12.2654H12.2652H12.2651H12.2649H12.2648H12.2646H12.2645H12.2643H12.2641H12.264H12.2638H12.2637H12.2635H12.2634H12.2632H12.2631H12.2629H12.2628H12.2626H12.2625H12.2623H12.2622H12.262H12.2619H12.2617H12.2616H12.2614H12.2613H12.2611H12.2609H12.2608H12.2606H12.2605H12.2603H12.2602H12.26H12.2599H12.2597H12.2596H12.2594H12.2593H12.2591H12.259H12.2588H12.2587H12.2585H12.2584H12.2582H12.2581H12.2579H12.2578H12.2576H12.2575H12.2573H12.2572H12.257H12.2569H12.2567H12.2566H12.2564H12.2563H12.2561H12.256H12.2559H12.2557H12.2556H12.2554H12.2553H12.2551H12.255H12.2548H12.2547H12.2545H12.2544H12.2542H12.2541H12.2539H12.2538H12.2536H12.2535H12.2533H12.2532H12.253H12.2529H12.2527H12.2526H12.2524H12.2523H12.2522H12.252H12.2519H12.2517H12.2516H12.2514H12.2513H12.2511H12.251H12.2508H12.2507H12.2505H12.2504H12.2502H12.2501H12.2499H12.2498H12.2497H12.2495H12.2494H12.2492H12.2491H12.2489H12.2488H12.2486H12.2485H12.2483H12.2482H12.248H12.2479H12.2477H12.2476H12.2475H12.2473H12.2472H12.247H12.2469H12.2467H12.2466H12.2464H12.2463H12.2461H12.246H12.2458H12.2457H12.2455H12.2454H12.2453H12.2451H12.245H12.2448H12.2447H12.2445H12.2444H12.2442H12.2441H12.2439H12.2438H12.2436H12.2435H12.2435C12.1621 11.1098 12.078 11.1106 12.0014 11.1189C9.38819 11.0178 7.43555 8.96409 7.43555 6.44C7.43555 3.85614 9.54169 1.75 12.1255 1.75C14.7091 1.75 16.815 3.85562 16.8155 6.43903C16.8061 8.97998 14.8211 11.0348 12.3073 11.12H12.3073H12.3072H12.3072H12.3071H12.3071H12.307H12.3069H12.3069H12.3068H12.3068H12.3067H12.3066H12.3066H12.3065H12.3065H12.3064H12.3063H12.3063H12.3062H12.3062H12.3061H12.3061H12.306H12.3059H12.3059H12.3058H12.3058H12.3057H12.3056H12.3056H12.3055H12.3055H12.3054H12.3054H12.3053H12.3052H12.3052H12.3051H12.3051H12.305H12.3049H12.3049H12.3048H12.3048H12.3047H12.3046H12.3046H12.3045H12.3045H12.3044H12.3044H12.3043H12.3042H12.3042H12.3041H12.3041H12.304H12.3039H12.3039H12.3038H12.3038H12.3037H12.3037H12.3036H12.3035H12.3035H12.3034H12.3034H12.3033H12.3032H12.3032H12.3031H12.3031H12.303H12.3029H12.3029H12.3028H12.3028H12.3027H12.3027H12.3026H12.3025H12.3025H12.3024H12.3024H12.3023H12.3022H12.3022H12.3021H12.3021H12.302H12.302H12.3019H12.3018H12.3018H12.3017H12.3017H12.3016H12.3015H12.3015H12.3014H12.3014H12.3013H12.3012H12.3012H12.3011H12.3011H12.301H12.301H12.3009H12.3008H12.3008H12.3007H12.3007H12.3006H12.3005H12.3005H12.3004H12.3004H12.3003H12.3003H12.3002H12.3001H12.3001H12.3H12.3H12.2999H12.2998H12.2998H12.2997H12.2997H12.2996H12.2996H12.2995H12.2994H12.2994H12.2993H12.2993H12.2992H12.2991H12.2991H12.299H12.299H12.2989H12.2988H12.2988H12.2987H12.2987H12.2986H12.2986H12.2985H12.2984H12.2984H12.2983H12.2983H12.2982H12.2981H12.2981H12.298H12.298H12.2979H12.2979H12.2978H12.2977H12.2977H12.2976H12.2976H12.2975H12.2974H12.2974H12.2973H12.2973H12.2972H12.2971H12.2971H12.297H12.297H12.2969H12.2969H12.2968H12.2967H12.2967H12.2966H12.2966H12.2965H12.2964H12.2964H12.2963H12.2963H12.2962H12.2962H12.2961H12.296H12.296H12.2959H12.2959H12.2958H12.2957H12.2957H12.2956H12.2956H12.2955H12.2954H12.2954H12.2953H12.2953H12.2952H12.2952H12.2951H12.295H12.295H12.2949H12.2949H12.2948H12.2947H12.2947H12.2946H12.2946H12.2945H12.2945H12.2944H12.2943H12.2943H12.2942H12.2942H12.2941H12.294H12.294H12.2939H12.2939H12.2938H12.2937H12.2937H12.2936H12.2936H12.2935H12.2935H12.2934H12.2933H12.2933H12.2932H12.2932H12.2931H12.293H12.293H12.2929H12.2929H12.2928H12.2928H12.2927H12.2926H12.2926H12.2925H12.2925H12.2924H12.2923H12.2923H12.2922H12.2922H12.2921H12.2921H12.292H12.2919H12.2919H12.2918H12.2918H12.2917H12.2916H12.2916H12.2915H12.2915H12.2914H12.2913H12.2913H12.2912H12.2912H12.2911H12.2911H12.291H12.2909H12.2909H12.2908H12.2908H12.2907H12.2906H12.2906H12.2905H12.2905H12.2904H12.2904H12.2903H12.2902H12.2902H12.2901H12.2901H12.29H12.2899H12.2899H12.2898H12.2898H12.2897H12.2896H12.2896H12.2895H12.2895H12.2894H12.2894H12.2893H12.2892H12.2892H12.2891H12.2891H12.289H12.2889H12.2889H12.2888H12.2888H12.2887H12.2887H12.2886H12.2885H12.2885H12.2884H12.2884H12.2883H12.2882H12.2882H12.2881H12.2881H12.288H12.2879H12.2879H12.2878H12.2878H12.2877H12.2877H12.2876H12.2875H12.2875H12.2874H12.2874H12.2873H12.2872H12.2872H12.2871H12.2871H12.287H12.287H12.2869H12.2868H12.2868H12.2867H12.2867H12.2866H12.2865H12.2865H12.2864H12.2864H12.2863H12.2863H12.2862H12.2861H12.2861H12.286H12.286H12.2859H12.2858H12.2858H12.2857H12.2857H12.2856H12.2855Z"
+              fill="#858585" stroke="#858585" />
+            <path
+              d="M7.15325 20.6348L7.15057 20.6331C5.86676 19.7833 5.22461 18.6655 5.22461 17.5C5.22461 16.3337 5.86769 15.2056 7.15182 14.3461C8.55332 13.4168 10.4165 12.9375 12.3021 12.9375C14.1883 12.9375 16.046 13.417 17.4369 14.3458L17.4373 14.346C18.714 15.1972 19.3646 16.3161 19.3646 17.48C19.3646 18.6465 18.7214 19.7747 17.437 20.6342C16.0353 21.5685 14.1772 22.05 12.2946 22.05C10.411 22.05 8.5437 21.568 7.15325 20.6348ZM7.42726 14.774C6.37914 15.4727 5.72461 16.4297 5.72461 17.51C5.72461 18.583 6.39206 19.5392 7.4272 20.226C8.77342 21.1285 10.549 21.5625 12.2946 21.5625C14.0404 21.5625 15.8161 21.1284 17.1624 20.2257C18.2103 19.527 18.8646 18.5702 18.8646 17.49C18.8646 16.4168 18.1969 15.4605 17.1615 14.7736C15.8153 13.8764 14.0399 13.445 12.2946 13.445C10.5491 13.445 8.77345 13.8765 7.42726 14.774Z"
+              fill="#858585" stroke="#858585" />
           </svg>
           <span class="small-headline mt-1">Profile</span>
         </a>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade js-login-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header px-5">
+          <h5 class="modal-title py-2 h2 text-primary">Đăng nhập</h5>
+          <button type="button" class="p-2 modal-close bg-transparent border-0 btn-close">X</button>
+        </div>
+        <form action="" id='login-form'>
+          <div class="modal-body p-5">
+            <div class="text-primary validation-error"></div>
+            <label for="email" class="body-1">Email: </label>
+            <input id="email" type="email" name="email" class="w-100 px-3 mt-2 py-3 rounded-2 mb-5"
+              placeholder="Nhập email">
+            <label for="password" class="body-1">Mật khẩu: </label>
+            <input id="password" type="password" name="password" class="w-100 px-3 mt-2 py-3 rounded-2"
+              placeholder="Nhập mật khẩu">
+
+          </div>
+          <div class="modal-footer px-5 py-1">
+            <button type="" class="btn btn-primary">
+              <span class='login-btn'>Đăng nhập</span>
+              <i class="fa-solid loading-icon fa-spinner spin d-none"></i>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

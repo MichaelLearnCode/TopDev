@@ -22,7 +22,7 @@ export default function render() {
     const locationCriteria = currentUrl.searchParams.get('location');
     const normalizedInput = input.trim().toLowerCase();
     const searchData = await api.get('jobs', {
-      limit: 10,
+      limit: 5,
       custom: (job) => {
         const normalizedJobTitle = job.title.trim().toLowerCase();
         return normalizedJobTitle.includes(normalizedInput) && (job.location.slug === locationCriteria || locationCriteria === 'all' || !locationCriteria)
@@ -32,16 +32,18 @@ export default function render() {
 
     searchData.forEach(job => {
       const suggestionItem = document.createElement('li');
-      suggestionItem.className = 'search-suggestion-item';
-
-      const img = document.createElement('img');
-      img.src = job.thumbnail;
-      img.alt = '';
+      suggestionItem.className = '';
 
       const span = document.createElement('span');
-      span.textContent = job.title;
-
-      suggestionItem.appendChild(img);
+      const a = document.createElement('a');
+      a.href = '#!';
+      a.onclick = ()=>{
+        searchSuggestion.classList.remove('active');
+      }
+      a.alt = '';
+      a.className = 'py-3 ps-5 search-suggestion-item btn text-decoration-none';
+      a.textContent = job.title;
+      span.appendChild(a);
       suggestionItem.appendChild(span);
 
       searchSuggestion.appendChild(suggestionItem);
@@ -145,6 +147,62 @@ export default function render() {
         }
       }
     })
+  }
+  async function renderProposeCarousel() {
+    const proposeCarousel = document.querySelector('.category-propose-carousel');
+    renderSkeletonComponent(proposeCarousel, components.createSkeletonJobCard,6)
+    const firstProposeCarousel = $('.owl-carousel.category-propose-carousel').owlCarousel({
+      dots: true,
+      margin: 10,
+      responsive: {
+          0: {
+              items: 1
+          },
+          768: {
+              items: 2
+          },
+          992: {
+              items: 3
+          },
+          1200: {
+              items: 1
+          }
+      }
+  });
+    const proposeData = await api.get('jobs',{limit: 6});
+    console.log(proposeData)
+    firstProposeCarousel.trigger('destroy.owl.carousel');
+    proposeCarousel.innerHTML = '';
+    proposeData.forEach(job => {
+      const jobCard = components.createJobCard({
+        title: job.title,
+        thumbnail: job.thumbnail,
+        salary: job.salary,
+        id: job.id,
+        locationType: job.locationType,
+        type: job.type,
+        description: job.description
+      })
+      proposeCarousel.appendChild(jobCard)
+    });
+    $('.owl-carousel.category-propose-carousel').owlCarousel({
+      dots: true,
+      margin: 10,
+      responsive: {
+          0: {
+              items: 1
+          },
+          768: {
+              items: 2
+          },
+          992: {
+              items: 3
+          },
+          1200: {
+              items: 1
+          }
+      }
+  });
   }
   async function renderBlogsCarousel() {
     const blogCarousel = document.querySelector('.blog-carousel');
@@ -306,6 +364,7 @@ export default function render() {
 
   // blog
   return {
+    renderProposeCarousel,
     renderSkeletonComponent,
     renderSearchSuggestion,
     renderDropdownContent,

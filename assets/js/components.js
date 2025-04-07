@@ -2,6 +2,71 @@ import { createElement, createText } from './ReactSimulator/virtual_dom.js';
 import { renderElement } from "./ReactSimulator/render.js";
 
 export default function Components() {
+    function createProfileDropdown({
+        avatar = 'https://avatars.githubusercontent.com/u/91683993', 
+        name = 'Nguyễn Tấn Đạt',
+        jsDropdownClass = 'js-dropdown-profile'
+    } = {}) {
+        let profileDropdown;
+        const dropdown = createElement('div', { className: `dropdown dropdown-profile ${jsDropdownClass}` });
+
+        // Dropdown button
+        const button = createElement('button', { className: 'btn gap-4 d-flex items-center dropdown-toggle px-0 px-md-4' });
+
+        // Avatar container
+        const avatarContainer = createElement('div', { className: 'dropdown-avatar' });
+        const avatarImg = createElement('img', {
+            width: '40',
+            height: '40',
+            src: avatar,
+            alt: '',
+            className: 'rounded-circle'
+        });
+
+        // Profile info
+        const profileInfo = createElement('div', { className: 'd-flex flex-column text-start' });
+        const profileName = createElement('span', { className: 'profile-name' }, createText(name));
+        const profileRole = createElement('span', { className: 'profile-role button-label' }, createText('UI UX'));
+
+        // Dropdown arrow
+        // <svg class="dropdown-arrow-down" xmlns="http://www.w3.org/2000/svg" width="14" height="8"
+        //                 viewBox="0 0 14 8" fill="none">
+        //                 <path d="M1 1.2187L4 4.21021L7 7.20171L13 1.2187" stroke-width="1.5" stroke-linecap="round"
+        //                   stroke-linejoin="round" />
+        //               </svg>
+        const dropdownArrow = document.createElement('svg');
+        
+
+
+        // Dropdown menu
+        function logout(){
+            localStorage.removeItem('access_token');
+            const profileHolder = document.querySelector('.profile-holder');
+            profileHolder.removeChild(profileDropdown);
+            profileHolder.querySelector('.login-modal-trigger').classList.remove('d-none');
+        }
+        const dropdownMenu = createElement('ul', { className: 'dropdown-menu js-dropdown-content' });
+        const menuItem1 = createElement('li', {}, createElement('a', { className: 'dropdown-item', href: '#' }, createText('Thông tin')));
+        const menuItem2 = createElement('li', {}, createElement('a', { className: 'dropdown-item', href: '#' }, createText('Cài đặt')));
+        const menuDivider = createElement('li', {}, createElement('hr', { className: 'dropdown-divider' }));
+        const menuLogout = createElement('li', {}, createElement('a', { className: 'dropdown-item', href: '#', onclick: logout }, createText('Đăng xuất')));
+        // Build the structure
+        avatarContainer.childeren.push(avatarImg);
+        profileInfo.childeren.push(profileName, profileRole);
+        button.childeren.push(avatarContainer, profileInfo);
+        dropdownMenu.childeren.push(menuItem1, menuItem2, menuDivider, menuLogout);
+        dropdown.childeren.push(button, dropdownMenu);
+        // Render the dropdown
+        profileDropdown = renderElement(dropdown);
+        profileDropdown.querySelector('.dropdown-toggle').appendChild(dropdownArrow);
+        dropdownArrow.outerHTML = `<svg class="dropdown-arrow-down" xmlns="http://www.w3.org/2000/svg" width="14" height="8"
+                        viewBox="0 0 14 8" fill="none">
+                        <path d="M1 1.2187L4 4.21021L7 7.20171L13 1.2187" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>`
+
+        return profileDropdown;
+    }
     function createSkeletonBlogCard() {
         const card = createElement('div', { className: 'card mt-4 card-blog' });
 
@@ -25,7 +90,7 @@ export default function Components() {
         const suggestionItem = document.createElement('li');
         suggestionItem.className = 'search-suggestion-item';
         const span = document.createElement('span');
-        span.className = 'skeleton skeleton-text';
+        span.className = 'skeleton skeleton-text py-3';
         suggestionItem.appendChild(span);
         return suggestionItem;
 
@@ -36,7 +101,7 @@ export default function Components() {
         });
         return renderElement(button);
     }
-    function createSkeletonTabJobCard(){
+    function createSkeletonTabJobCard() {
         const col = document.createElement('div');
         col.className = 'col';
         const card = createSkeletonJobCard();
@@ -197,6 +262,7 @@ export default function Components() {
         return cardWrapperEle;
     }
     return {
+        createProfileDropdown,
         createSkeletonTabJobCard,
         createSkeletonSearchSuggestion,
         createSkeletonBlogCard,
